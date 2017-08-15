@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#673ab7"
+            android:orientation="vertical">
+            <!--3FAAFF-->
+            <RelativeLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#673ab7">
+
+                <LinearLayout
+                    android:id="@+id/title_back"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/height10"
+                    android:padding="7dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/topImageview"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/back1" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+                <!--android:layout_toLeftOf="@+id/title_right"-->
+                <!--android:layout_toRightOf="@+id/title_back"-->
+                <LinearLayout
+                    android:id="@+id/title_rightImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/height15"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/title_sc"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/sc" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="30dp"
+                        android:id="@+id/chouti"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/title_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/height10"
+                            android:src="@mipmap/cd" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:id="@+id/title_right"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="10dp">-->
+
+                <!--</LinearLayout>-->
+                <TextView
+                    android:id="@+id/logo"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="选台点菜"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/scRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#673ab7"
+                android:visibility="gone" >
+
+
+                <LinearLayout
+                    android:id="@+id/title_back2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <LinearLayout
+                        android:id="@+id/title_back1"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/topImageview1"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/back1" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/spinnnerRl"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2">
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:spinnerMode="dropdown"
+                            android:layout_weight="3"
+                            android:background="@null" />
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/xiala" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#ffffff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <EditText
+                            android:id="@+id/serchEdittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="天地一号"
+                            android:paddingLeft="@dimen/height5"
+                            android:textSize="13dp"
+                            android:textColorHint="#fff" />
+
+                        <ImageView
+                            android:id="@+id/title_sc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/sc" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#ffffff" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/title_menu1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/height10"
+                        android:layout_weight="1"
+                        android:src="@mipmap/cd" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lianll"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/view_top"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/cancle"
+                android:layout_width="50dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/height20"
+                android:background="@color/white"
+                android:text="取消" />
+
+            <TextView
+                android:id="@+id/tishici"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:text="已选择3桌"
+                android:textColor="@color/white"
+                android:textSize="@dimen/height15" />
+
+            <Button
+                android:id="@+id/comfirmBt"
+                android:layout_width="50dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/height20"
+                android:background="@color/white"
+                android:text="确定" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lianll"
+
+            android:background="@color/main_background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+
+                <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+                    android:id="@+id/refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:id="@+id/scrollableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/height3"
+                        android:layout_marginRight="@dimen/height3"
+                        android:background="@color/backF8"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <jdhe.iyibank.com.iyimeal.costomview.ExpandGridView
+                                android:id="@+id/expandGridView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/height5"
+                                android:layout_marginTop="@dimen/height10"
+                                android:gravity="center"
+                                android:horizontalSpacing="9dip"
+                                android:listSelector="@android:color/transparent"
+                                android:numColumns="4"
+                                android:scrollbars="none"
+                                android:stretchMode="columnWidth"
+                                android:verticalSpacing="9dip" />
+                        </LinearLayout>
+                    </ScrollView>
+                </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+                <LinearLayout
+                    android:id="@+id/recyclerll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/height5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/main_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/border" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/height5"
+                    android:paddingTop="@dimen/height5">
+
+                    <TextView
+                        android:id="@+id/tab_main1"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/index1_selector"
+                        android:gravity="center"
+                        android:text="点菜"
+                        android:textColor="@drawable/index_text_selector"
+                        android:textSize="@dimen/textsize10" />
+
+                    <TextView
+                        android:id="@+id/tab_main2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/index2_selector"
+                        android:gravity="center"
+                        android:text="查询修改"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@drawable/index_text_selector"
+                        android:textSize="@dimen/textsize10" />
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+                    <!--<TextView-->
+                    <!--android:id="@+id/tab_main2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:drawableTop="@drawable/index1_dongtaiselector"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:text="动态"-->
+                    <!--android:textColor="@drawable/index_text_selector"-->
+                    <!--android:textSize="@dimen/textsize10" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/unread_msg_number_dong"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/unread_count_bg"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--/>-->
+
+                    <!--</RelativeLayout>-->
+
+
+                    <TextView
+                        android:id="@+id/bangctxt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="帮城"
+                        android:textColor="@drawable/index_text_selector"
+                        android:textSize="@dimen/textsize10"
+                        android:visibility="invisible" />
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/jiarl"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<com.pigbear.comehelpme.customview.IImageView-->
+                    <!--android:id="@+id/tab_center"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:src="@drawable/index_center" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/unread_msg_number1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:background="@drawable/unread_count_bg"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="@dimen/textsize12"-->
+                    <!--android:visibility="gone" />-->
+                    <!--</RelativeLayout>-->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tab_main3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@drawable/index3_selector"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="拼台"
+                            android:textColor="@drawable/index_text_selector"
+                            android:textSize="@dimen/textsize10" />
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/unread_msg_number"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@drawable/unread_count_bg"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:textSize="@dimen/textsize12"-->
+                        <!--android:visibility="invisible" />-->
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tab_main4"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/index4_selector"
+                        android:text="结账"
+                        android:gravity="center"
+                        android:textColor="@drawable/index_text_selector"
+                        android:textSize="@dimen/textsize10" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|bottom">
+
+            <ImageView
+                android:id="@+id/jia"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/jii"
+                android:scaleType="centerCrop"
+                android:gravity="center_horizontal"
+               />
+
+            <!--<TextView-->
+                <!--android:id="@+id/jia"-->
+                <!--android:layout_width="64dp"-->
+                <!--android:layout_height="64dp"-->
+                <!--android:drawableBottom="@drawable/jii"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:textColor="@drawable/index_text_selector"-->
+                <!--android:textSize="@dimen/textsize10" />-->
+            <!--android:drawableTop="@drawable/jia"-->
+            <!--android:text="我的帮城"-->
+            <!--<TextView-->
+            <!--android:id="@+id/noticeNub"-->
+            <!--android:layout_width="38dp"-->
+            <!--android:layout_height="38dp"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:text="0"-->
+            <!--android:visibility="gone"-->
+            <!--android:background="@drawable/yuan_text_red"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textSize="20dp" />-->
+            <!--android:background="#dc3c14"-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

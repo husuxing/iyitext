@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_add_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2">
+
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/view_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/comfirmBtn"
+        android:layout_below="@id/view_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/imagell"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:layout_margin="@dimen/height10"
+                android:background="#f3f7fa">
+
+                <ImageView
+                    android:id="@+id/imageiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/paiz" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/image"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+                <!--android:scaleType="fitXY"-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="中文名"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <!--<Spinner-->
+                <!--android:id="@+id/spinner"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@null"-->
+                <!--android:textSize="18dp" />-->
+
+                <EditText
+                    android:id="@+id/chinese_name"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="英文名"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/english_name"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:maxLength="@integer/length_text"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="拼音简码"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/pinying"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="菜品编码"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/product_nmb"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="菜品序号"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/product_xh"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="菜品单价"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/product_unitprice"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="会员价"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/consumerprice"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="特价"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/Special_Offer"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="计量单位"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/measurement_unit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="所属分类"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/subordinate_classification"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="菜品规格"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/dishes_specifications"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="收牌标志"
+                    android:textColor="@color/gray_9"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/comfirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/yellow67"
+        android:text="添加"
+        android:textColor="@color/white"
+        android:textSize="@dimen/height16" />
+</RelativeLayout>

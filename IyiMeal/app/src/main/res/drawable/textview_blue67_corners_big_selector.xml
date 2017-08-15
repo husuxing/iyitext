@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--<item android:state_focused="true"-->
+        <!--android:drawable="@drawable/brand_red" />&lt;!&ndash;选中时效果图&ndash;&gt;-->
+
+    <!--<item android:state_focused="false"-->
+        <!--android:drawable="@drawable/border_edit" />&lt;!&ndash;未选中时效果图&ndash;&gt;-->
+
+    <item android:state_focused="true" android:drawable="@drawable/brand_blue67"></item>
+    <item android:drawable="@drawable/brand_blue67" android:state_checked="true"></item>
+    <item android:drawable="@drawable/brand_blue67" android:state_pressed="true"></item>
+</selector>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/view_top"
+    android:background="@color/yellow67"
+    android:orientation="vertical">
+    <!--3FAAFF-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <LinearLayout
+            android:id="@+id/title_back"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/height10"
+            android:layout_centerVertical="true"
+            android:padding="7dp">
+
+            <ImageView
+                android:id="@+id/topImageview"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/back1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+        <!--android:layout_toLeftOf="@+id/title_right"-->
+        <!--android:layout_toRightOf="@+id/title_back"-->
+
+        <LinearLayout
+            android:id="@+id/title_rightImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/height15"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/title_sc"
+                android:layout_width="30dp"
+                 android:visibility="gone"
+                android:layout_height="30dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/sc" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/title_wen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="保存"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:id="@+id/titmean"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/title_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/height10"
+                    android:src="@mipmap/cd" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/title_rightImage"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginRight="@dimen/height15"-->
+            <!--android:visibility="gone"-->
+            <!--android:padding="5dp">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/title_menu"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+               <!--android:src="@mipmap/screening" />-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/title_right"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="10dp">-->
+
+        <!--</LinearLayout>-->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

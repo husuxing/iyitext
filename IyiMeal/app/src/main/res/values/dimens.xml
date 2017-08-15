@@ -1,0 +1,88 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nubsize">65dp</dimen>
+    <!-- app配置 -->
+    <dimen name="item_height">67dp</dimen>
+    <dimen name="section_div_height">20dp</dimen>
+    <dimen name="textsize10">10sp</dimen>
+    <dimen name="textsize12">12sp</dimen>
+    <dimen name="textsize13">13sp</dimen>
+    <dimen name="textsize14">14sp</dimen>
+    <dimen name="textsize15">15sp</dimen>
+    <dimen name="textsize16">16sp</dimen>
+    <dimen name="textsize18">18sp</dimen>
+    <dimen name="textsize20">20sp</dimen>
+    <dimen name="textsize25">25sp</dimen>
+    <dimen name="textsize30">30sp</dimen>
+    <dimen name="textsize40">40sp</dimen>
+    <dimen name="textsize45">45sp</dimen>
+    <dimen name="textsize50">50sp</dimen>
+    <dimen name="height1.5">1.5dp</dimen>
+    <dimen name="height1">1dp</dimen>
+    <dimen name="height2">2dp</dimen>
+    <dimen name="height3">3dp</dimen>
+    <dimen name="height4">4dp</dimen>
+    <dimen name="height5">5dp</dimen>
+    <dimen name="height6">6dp</dimen>
+    <dimen name="height8">8dp</dimen>
+    <dimen name="height10">10dp</dimen>
+    <dimen name="height11">11dp</dimen>
+    <dimen name="height12">12dp</dimen>
+    <dimen name="height13">13dp</dimen>
+    <dimen name="height14">14dp</dimen>
+    <dimen name="height15">15dp</dimen>
+    <dimen name="height16">16dp</dimen>
+    <dimen name="height18">18dp</dimen>
+    <dimen name="height20">20dp</dimen>
+    <dimen name="height25">25dp</dimen>
+    <dimen name="height30">30dp</dimen>
+    <dimen name="height35">35dp</dimen>
+    <dimen name="height40">40dp</dimen>
+    <dimen name="height45">45dp</dimen>
+    <dimen name="height50">50dp</dimen>
+    <dimen name="height55">55dp</dimen>
+    <dimen name="height60">60dp</dimen>
+    <dimen name="height65">65dp</dimen>
+    <dimen name="height70">70dp</dimen>
+    <dimen name="height75">75dp</dimen>
+    <dimen name="height80">80dp</dimen>
+    <dimen name="height90">90dp</dimen>
+    <dimen name="height85">85dp</dimen>
+    <dimen name="height100">100dp</dimen>
+    <dimen name="height150">150dp</dimen>
+    <dimen name="height105">105dp</dimen>
+    <dimen name="height120">120dp</dimen>
+    <dimen name="height115">115dp</dimen>
+    <dimen name="height125">125dp</dimen>
+    <dimen name="height135">135dp</dimen>
+    <dimen name="height200">200dp</dimen>
+    <dimen name="chat_message_max_width">230dp</dimen>
+    <dimen name="ratingbar_layout_height">14dp</dimen>
+    <dimen name="border_size">1dp</dimen>
+    <dimen name="border_fine_size">0.5dp</dimen>
+    <dimen name="main_corners_size">4dp</dimen>
+    <dimen name="button_corners_size">50dp</dimen>
+    <dimen name="serch_button_corners_size">5dp</dimen>
+    <dimen name="mark_size">10dp</dimen>
+    <dimen name="head_border">3dp</dimen>
+    <dimen name="size_avatar">50dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--以下是lodingdilog-->
+    <!--padding-->
+    <dimen name="padding_svprogresshuddefault">15dp</dimen>
+    <!--窗口最小宽度-->
+    <dimen name="size_minwidth_svprogresshuddefault">120dp</dimen>
+    <!--图片宽高-->
+    <dimen name="size_image_bigloading">80dp</dimen>
+    <!--图片宽高-->
+    <dimen name="size_image_smallloading">60dp</dimen>
+    <!--圆角-->
+    <dimen name="radius_svprogresshuddefault">25px</dimen>
+    <!--提示的文字大小-->
+    <dimen name="textSize_svprogresshuddefault_msg">15sp</dimen>
+    <dimen name="margintop_svprogresshuddefault_msg">10dp</dimen>
+    <dimen name="gf_title_bar_height">56dp</dimen>
+    <integer name="length">20</integer>
+    <integer name="length_text">15</integer>
+</resources>

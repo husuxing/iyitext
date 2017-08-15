@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_add_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/huif5"
+    >
+
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/view_top" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+      <!---->
+        <!--android:layout_marginTop="15dp"-->
+   <!---->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:layout_marginTop="@dimen/height15"
+            android:layout_below="@+id/view_top"
+            android:background="@color/white2"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="编号"
+                    android:textColor="@color/gray_9"
+                    android:textSize="14dp" />
+
+                <!--<Spinner-->
+                <!--android:id="@+id/spinner"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@null"-->
+                <!--android:textSize="18dp" />-->
+
+                <EditText
+                    android:id="@+id/account"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="14dp"
+                    />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="桌台"
+                    android:textColor="@color/gray_9"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/table"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="所属区域"
+                    android:textColor="@color/gray_9"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/areaet"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="可坐人数"
+                    android:textColor="@color/gray_9"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/down_nub"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="包间费"
+                    android:textColor="@color/gray_9"
+                    android:textSize="14dp" />
+
+                <EditText
+
+                    android:id="@+id/room_charge"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/height5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="餐位费"
+                    android:textColor="@color/gray_9"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/mealfee"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:maxLength="@integer/length_text"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <include layout="@layout/border" />
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/comfirmBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="添加"-->
+        <!--android:textSize="@dimen/height18"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:background="@color/yellow67" />-->
+</RelativeLayout>

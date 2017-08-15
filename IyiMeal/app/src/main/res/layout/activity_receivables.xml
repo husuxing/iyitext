@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_query_modification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/view_top" />
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/gray_more"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/height14"
+
+            android:textColor="@color/hei34"
+            android:layout_marginLeft="@dimen/height20"
+            android:text="连桌"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/height14"
+            android:textColor="@color/hei34"
+            android:layout_marginRight="@dimen/height20"
+            android:text="共15人用餐"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_above="@id/bottom"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ScrollView
+            android:id="@+id/refresh"
+            android:layout_below="@id/view_top"
+            android:layout_above="@id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <jdhe.iyibank.com.iyimeal.costomview.ExpandListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:scrollbars="none"
+                android:layout_weight="1"
+                android:dividerHeight="@dimen/height10"
+                android:divider="#F5F5F5" />
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#8037474f"
+                android:layout_alignParentBottom="true"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/height10"
+                    android:layout_height="wrap_content"
+                    android:text="共 5 桌"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="共点"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/height4"
+                        android:layout_marginLeft="@dimen/height5"
+                        android:layout_marginRight="@dimen/height5"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/brand_balck"
+                        android:text="12"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="道菜"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="应收￥ 560.00"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/height10"
+                    android:paddingRight="@dimen/height10"
+                    android:paddingTop="@dimen/height3"
+                    android:paddingBottom="@dimen/height3"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="@dimen/height8"
+                    android:gravity="center"
+                    android:background="@drawable/brand_blue67"
+                    android:layout_height="wrap_content"
+                    android:text="抹零"/>
+                <!--<ImageView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="right"-->
+                    <!--android:id="@+id/addproduct"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/jiacai"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/sureall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/yellow67"
+                    android:gravity="center"
+                    android:text="马上收款"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

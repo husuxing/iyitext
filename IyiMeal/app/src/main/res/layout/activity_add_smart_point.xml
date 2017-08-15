@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_query_modification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/huif5"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/view_top" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white2"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:text="套餐名称"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/setmeal_name"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/height25"
+                android:background="@null"
+                android:textSize="@dimen/height14"
+                android:hint="请输入"
+                android:textColorHint="@color/gray"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:text="用餐人数"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/height25"
+                android:hint="请输入"
+                android:textColorHint="@color/gray"
+                android:inputType="number"
+                android:textSize="@dimen/height14"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:text="套餐价格"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/setmeal_price"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:layout_height="match_parent"
+                android:hint="请输入"
+                android:inputType="number"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/height14"
+                android:layout_marginLeft="@dimen/height25"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_marginTop="@dimen/height10"
+        android:layout_height="wrap_content"
+        android:text="菜品列表"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/heng"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/zuo"
+            android:layout_marginTop="-1dp"
+            android:background="@color/graydb" />
+        <jdhe.iyibank.com.iyimeal.costomview.ExpandListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/heng"
+            android:layout_above="@+id/bottom"
+            android:layout_marginTop="@dimen/height5"
+            android:background="@color/white2"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/height13"
+            android:paddingRight="@dimen/height13"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#8037474f"
+                android:layout_alignParentBottom="true"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/height10"
+                    android:layout_height="wrap_content"
+                    android:text="共100桌"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="共点"/>
+                    <TextView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="@dimen/height5"
+                        android:layout_marginRight="@dimen/height5"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/brand_balck"
+                        android:text="12"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="道菜"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:text="共￥ 560.00"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/sureall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/yellow67"
+                    android:gravity="center"
+                    android:text="添加菜品"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

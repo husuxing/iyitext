@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_cancellation_cashier"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/scRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#673ab7"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/title_back2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <LinearLayout
+                android:id="@+id/title_back1"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/height5"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/topImageview1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/back1" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/height25"
+                android:layout_marginLeft="@dimen/height15"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/serach"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="天地一号"
+                    android:textColorHint="#fff" />
+
+                <ImageView
+                    android:id="@+id/title_sc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/sc" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:dividerHeight="@dimen/height10"
+            android:divider="@color/bg_gray" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+</LinearLayout>

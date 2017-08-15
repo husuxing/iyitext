@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height40"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dialog_left_background"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_medium_gray_color"
+            android:textSize="@dimen/textsize15" />
+
+        <View
+            android:layout_width="@dimen/border_fine_size"
+            android:layout_height="match_parent"
+            android:background="@color/border" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dialog_right_background"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/textsize15" />
+    </LinearLayout>
+
+</LinearLayout>

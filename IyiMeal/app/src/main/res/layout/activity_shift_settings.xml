@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F5F5F5"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/view_top" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@id/view_top"
+        android:layout_above="@id/comfirmBtn"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/height5"
+        android:layout_height="match_parent"
+        >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/height5"
+            android:divider="@null" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+    <Button
+        android:id="@+id/comfirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="添加班次"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_marginRight="@dimen/height10"
+        android:layout_marginBottom="@dimen/height10"
+        android:textSize="@dimen/height15"
+        android:textColor="@color/black"
+        android:background="@drawable/border_edit_wrirh" />
+</RelativeLayout>

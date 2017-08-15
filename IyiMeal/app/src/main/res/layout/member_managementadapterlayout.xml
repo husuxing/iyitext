@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/height10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height12"
+            android:layout_weight="1"
+            android:text="谢泳"
+            android:textColor="@color/hui3c"
+            android:textSize="@dimen/height16" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="13636353265"
+            android:textColor="@color/hui3c"
+            android:textSize="@dimen/height16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_marginRight="@dimen/height10"
+        android:layout_marginBottom="@dimen/height10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height12"
+            android:layout_weight="1"
+            android:text="卡号"
+            android:textColor="@color/hui3c"
+            android:textSize="@dimen/height12" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="136363532653562145"
+            android:textColor="@color/hui3c"
+            android:textSize="@dimen/height16" />
+
+    </LinearLayout>
+</LinearLayout>

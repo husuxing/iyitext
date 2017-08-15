@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorgray">#cccccc</color>
+    <color name="colorgray69">#696969</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="bgColor_overlay_black">#95000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_svprogressdefaultview">@android:color/white</color>
+    <!--标题颜色-->
+    <color name="textColor_svprogresshuddefault_msg">#000000</color>
+    <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
+    <color name="roundProgressColor_svprogresshuddefault">@android:color/black</color>
+    <!--以上是lodingdilog-->
+    <color name="material_red">#ffF44336</color>
+    <color name="count_blue">#3FAAFF</color>
+    <color name="material_green">#ff4CAF50</color>
+    <color name="material_blue">#ff03A9F4</color>
+    <color name="material_yellow">#ffFFEB3B</color>
+    <!-- scanner -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="blue_qian">#b4ddff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <color name="gray_9">#999999</color>
+    <color name="gray_6">#666666</color>
+    <color name="gray_6_tm">#99dddddd</color>
+    <color name="gray_96_tm">#99666666</color>
+    <color name="gray_aa_tm">#aa222222</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#00000000</color>
+    <color name="capture_text_cover_bg">#99535353</color>
+    <color name="capture_text_bg">#535353</color>
+    <color name="seek_bar_text">#fff6f6f6</color>
+    <!-- app -->
+    <!-- 品牌蓝色 -->
+    <color name="home_brand_blue">#4683D4</color>
+    <!-- 品牌红色 -->
+    <color name="home_brand_red">#ED5D5D</color>
+    <!-- 品牌黄色 -->
+    <color name="home_brand_yellow">#FFB933</color>
+
+
+    <color name="main_red">#dc1e00</color>
+    <!-- 抢红包红色深 -->
+    <color name="packet_red_gray">#D74023</color>
+    <!-- 抢红包红色浅 -->
+    <color name="packet_red">#FC4F2D</color>
+    <!-- 主色调红 -->
+    <color name="main_blue">#1E90FF</color>
+    <color name="blue235">#235e91</color>
+    <!-- 主色蓝色-->
+    <color name="main_background">#fafafa</color>
+    <!--背景色  -->
+    <color name="bottom_background">#f0f0f0</color>
+    <!--底色  -->
+    <color name="dark_red">#b41900</color>
+    <!-- 不能单独使用此颜色，需要配合主色红 -->
+    <!-- 字体颜色 -->
+    <color name="text_medium_gray_color">#919191</color>
+    <color name="text_medium_b_color">#b4b4b4</color>
+    <!-- 中灰  一般用于 简介、备注、提示等 -->
+    <color name="text_light_gray_color">#bebebe</color>
+    <!-- 浅灰  一般用于标注时间、公里数等 -->
+    <color name="text_deepest_color">#505050</color>
+    <!-- 最深  一般用于标题、姓名等 -->
+    <color name="text_title_color">#323232</color>
+    <!-- 最深  一般用于标题、姓名等 -->
+    <color name="red">#dc2d13</color>
+    <!-- 红色 用于警示、提醒、醒目信息等 -->
+    <color name="walletRed">#dc2d13</color>
+    <color name="walletgray">#475059</color>
+    <!-- 钱包金额标题颜色 -->
+    <color name="textcolor1">#787878</color>
+    <color name="textcolor87">#878787</color>
+    <color name="beijlogon">#3EA6FF</color>
+    <color name="line">#ffd3dde6</color>
+    <color name="line1">#fff3fdf6</color>
+    <color name="griditems_bg">#e1e1e1</color>
+    <color name="text_bg">#C8C8C8</color>
+    <color name="backF8F8">#F8F8F8</color>
+    <color name="backF8">#FcFcfc</color>
+    <color name="blueqr">#54A7FC</color>
+    <color name="border">#c9c9c9</color>
+    <color name="black3">#333333</color>
+    <color name="black5d">#5d5d5d</color>
+    <color name="bluesmall">#AEDBFF</color>
+    <color name="graybf">#bfbfbf</color>
+    <color name="graydb">#dbdbdb</color>
+    <color name="hei34">#343434</color>
+    <!-- 线条颜色 -->
+    <color name="tab_not_checked">#b9b9b9</color>
+    <!-- 首页选项卡未选中字体颜色 -->
+    <color name="text_bottom_background">#f5f5f5</color>
+    <color name="redf5">#ff5554</color>
+    <color name="redff52">#ff5252</color>
+    <!-- 文字区域底色 -->
+    <color name="chat_background">#ebebeb</color>
+    <!--聊天背景 -->
+    <color name="white">#ffffffff</color>
+    <color name="white2">#ffffff</color>
+    <color name="wheel_timebtn_nor">#54a3fa</color>
+    <color name="wheel_timebtn_pre">#CCCCCC</color>
+    <!--附近商店倒计时背景 -->
+    <color name="near_shop_time_bg">#DE4057</color>
+    <color name="near_shop_time_bgff">#ff4f4f</color>
+    <!--抢红包标注字体 -->
+    <color name="red_packet_open">#FDD08F</color>
+    <color name="hui86">#868686</color>
+    <color name="dongjie">#549AF7</color>
+    <!-- 钱包冻结按钮颜色   -->
+    <color name="pressblue">#007CEA</color>
+    <color name="pressblueff">#000cff</color>
+    <color name="pressblue4f">#08204f</color>
+    <color name="pressblue425">#425d81</color>
+    <color name="dojie">#304682</color>
+    <color name="map_closs">#007aff</color>
+    <color name="dianznull">#a0a0a0</color>
+    <color name="vifrification">#00000000</color>   <!-- 透明 -->
+    <!-- 钱包冻结按下颜色   -->
+    <color name="blue">#34aadc</color>
+    <color name="blue3ea">#3ea6ff</color>
+    <!-- 红包分享页批注   -->
+    <color name="packet_share_detail_blue">#607CB5</color>
+    <!-- 性别男   -->
+    <color name="pink">#ff758f</color>
+    <!-- 性别女 -->
+    <color name="yellow">#ffb400</color>
+    <!-- 黄色背景 -->
+    <color name="yellow2">#ff9500</color>
+    <!-- 钱包支持服务 -->
+    <color name="yellow3">#fa7828</color>
+    <!-- 预收款背景色 -->
+    <color name="yellow4">#f8c301</color>
+    <!-- 成为帮Sir时提醒开通钱包对话框 -->
+    <color name="yellow_pressed">#f0aa24</color>
+    <!-- 黄色点击效果 -->
+    <color name="heat_red">#f76446</color>
+    <!-- 热度 -->
+    <color name="goods_green">#73b435</color>
+    <!-- 商品 -->
+    <color name="service_blue">#549af7</color>
+    <!-- 服务 -->
+    <color name="other_gray">#666e70</color>
+    <!-- 其他 -->
+    <color name="green">#66c13a</color>
+    <!-- 绿色-->
+    <color name="green_lern_more">#2AB2AA</color>
+    <!-- 了解更多绿色-->
+    <color name="blue_lern_more">#2485E2</color>
+    <!-- 了解更多蓝色-->
+    <color name="yellow_lern_more">#FDA400</color>
+    <color name="gray_more">#dadada</color>
+    <color name="gray_moread">#adadad</color>
+    <!-- 了解更多黄色-->
+    <color name="purple">#9B30FF</color>
+    <!-- 紫色 -->
+    <!-- 灰色按钮 颜色 点击效果 -->
+    <color name="gray">#c8c8c8</color>
+    <color name="darkgray">#b4b4b4</color>
+    <color name="darkgray_33">#45000000</color>
+
+
+    <color name="light_green">#f4ffef</color>
+    <color name="light_gray">#f6f6f6</color>
+    <color name="light_orange">#fff6e5</color>
+
+    <color name="translucent_white">#55ffffff</color>
+    <color name="translucent_mian">#ddfafafa</color>
+    <color name="translucent_black">#70000000</color>
+    <color name="translucent_black10">#20000000</color>
+
+
+    <!--品牌的颜色-->
+    <color name="brand_yellow">#FFB933</color>
+    <color name="yellowf2">#f2c31d</color>
+    <color name="brand_dark_green">#70b45a</color>
+    <color name="brand_green">#73b435</color>
+    <color name="brand_dark_blue">#549af7</color>
+    <color name="brand_mid_blue">#4ec7ee</color>
+    <color name="brand_blue">#00d3be</color>
+    <color name="brand_dark_red">#f76446</color>
+    <color name="brand_red">#ed5d5d</color>
+    <color name="brand_sred">#dc3c14</color>
+    <color name="hui3c">#3c3c3c</color>
+    <color name="brand_purple">#9d87b7</color>
+    <color name="brand_brown">#c5a178</color>
+    <color name="brand_brown_red">#DC2C14</color>
+    <color name="brand_brown_bl">#5C9DF7</color>
+    <color name="yellow67">#673ab7</color>
+    <!--photo-->
+    <color name="black">#000000</color>
+    <color name="black2632">#263238</color>
+    <color name="deep_gray">#394257</color>
+    <color name="blue94c">#94cdff</color>
+    <color name="border_gray">#d9dfe5</color>
+    <color name="bg_gray">#e1e1e1</color>
+    <color name="bg_grayee">#eeeeee</color>
+    <color name="btn_gray">#d1d1d1</color>
+    <color name="glass_gall">#c2ebef</color>
+    <color name="light_blue">#87d0f2</color>
+    <color name="mood_red_tit">#BE271C</color>
+
+    <color name="nubcoloer">#889eb6</color>
+    <color name="huid0">#d0d0d0</color>
+    <color name="huif5">#F5F5F5</color>
+    <color name="huitou_3c">#aa3c3c3c</color>
+
+
+    <color name="default_ripple">#e2e2e2</color>
+</resources>

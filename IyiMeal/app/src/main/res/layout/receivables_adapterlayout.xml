@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/height10"
+    android:paddingRight="@dimen/height10">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp">
+
+        <TextView
+            android:id="@+id/zuo"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:gravity="center_vertical"
+            android:text="菜品"
+            android:textColor="@color/black"
+            android:textSize="@dimen/height14" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_alignLeft="@+id/zuo"
+            android:layout_alignRight="@+id/zuo"
+            android:layout_below="@+id/zuo"
+            android:background="@color/yellow67"></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/height20"
+            android:background="@drawable/brand_blue67"
+            android:paddingBottom="@dimen/height3"
+            android:paddingLeft="@dimen/height10"
+            android:paddingRight="@dimen/height10"
+            android:paddingTop="@dimen/height3"
+            android:text="优惠"
+            android:textColor="@color/white2"
+            android:textSize="@dimen/height15" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"
+            android:text="-￥150"
+            android:textColor="@color/yellow67"
+            android:textSize="@dimen/height15" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="120dp"
+            android:text="85折"
+            android:textColor="@color/yellow67"
+            android:textSize="@dimen/height15" />
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/zuo"
+        android:layout_marginTop="-1dp"
+        android:background="@color/graydb" />
+
+    <jdhe.iyibank.com.iyimeal.costomview.ExpandListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height5"
+        android:layout_weight="1"
+        android:divider="#F5F5F5"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" />
+</LinearLayout>

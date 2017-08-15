@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_member_management_modification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/view_top" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_margin="@dimen/height10"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.0"
+                android:text="卡号"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="@color/red"
+                android:text="*"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/kanub"
+                android:layout_width="0dp"
+                android:textSize="@dimen/height14"
+                android:hint="请输入"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black3"
+                android:background="@null"
+                android:inputType="number"
+                android:layout_marginLeft="@dimen/height25"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:text="姓名"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="@color/red"
+                android:text="*"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:hint="请输入"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height14"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="@dimen/height25"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:text="手机"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="@color/red"
+                android:text="*"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/height25"
+                android:background="@null"
+                android:textSize="@dimen/height14"
+                android:hint="请输入"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black3"
+                android:inputType="phone"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:text="生日"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/height25"
+                android:background="@null"
+                android:textSize="@dimen/height14"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black3"
+                android:hint="请输入"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:text="地址"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/adress"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/height25"
+                android:hint="请输入"
+                android:textSize="@dimen/height14"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black3"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:text="备注"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/bz"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:layout_height="match_parent"
+                android:hint="请输入"
+                android:textSize="@dimen/height14"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black3"
+                android:layout_marginLeft="@dimen/height25"
+                android:layout_marginRight="5dp"
+                android:layout_weight="10" />
+        </LinearLayout>
+
+        <include layout="@layout/border"></include>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/comfirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/height10"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="添加"
+        android:textSize="@dimen/height16"
+        android:textColor="@color/white"
+        android:background="@color/yellow67" />
+</LinearLayout>

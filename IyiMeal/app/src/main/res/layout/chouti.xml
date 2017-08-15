@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/main_left_drawer_layout"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@mipmap/bjct"
+                android:gravity="center"
+                android:text="功能菜单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/height13" />
+
+            <TextView
+                android:id="@+id/dcsy"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/height20"
+                android:gravity="center"
+                android:text="点菜收银"
+                android:background="@drawable/brand_blue67"
+                android:textColor="@color/white2"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/cxsy"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="撤销收银"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/jbbb"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="交班报表"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/mmfTv"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="会员管理"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="历史账单"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/footmaintenance"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="菜品维护"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/adminqx"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="管理员权限"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/basemessage"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="基本信息"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+            <TextView
+                android:id="@+id/productxf"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="产品续费"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/height13" />
+
+            <include layout="@layout/border"></include>
+
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/tuichu"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/height20"
+            android:layout_marginTop="@dimen/height30"
+            android:background="@drawable/border_edit_gray"
+            android:text="退出"
+            android:textSize="@dimen/height13" />
+    </RelativeLayout>
+</LinearLayout>

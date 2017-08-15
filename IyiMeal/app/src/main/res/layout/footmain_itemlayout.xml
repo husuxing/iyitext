@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/huif5"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="18dp"
+        android:id="@+id/delete"
+        android:layout_height="18dp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/height10"
+        android:src="@mipmap/delete" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/height5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/height15"
+        android:text="川菜" />
+
+</LinearLayout>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_below="@+id/zuo"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_marginRight="@dimen/height10"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"></View>
+    <View
+        android:id="@+id/heng"
+        android:layout_width="100dp"
+        android:layout_below="@+id/zuo"
+        android:visibility="gone"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/yellow67"></View>
+</RelativeLayout>

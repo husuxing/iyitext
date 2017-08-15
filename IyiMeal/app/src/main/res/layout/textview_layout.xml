@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:padding="@dimen/height5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/yellow67"
+    android:textColor="@color/white2"
+    android:textSize="@dimen/height18"
+    android:text="jjjjjj"/>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<resources>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="app_name">爱益</string>
+    <!--<string name="app_name_zh">爱益</string>-->
+    <string name="length">20</string>
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="usernotnull">用户名不能为空</string>
+    <string name="passwordnotnull">密码不能为空</string>
+    <string name="edit">编辑</string>
+    <string name="add">添加</string>
+    <string name="shopTipe">店小二提示</string>
+
+    <string name="distribution_scope_notnull">配送范围不能为空</string>
+    <string name="starting_price_notnull">起始价不能为空</string>
+    <string name="delivery_fee_notnull">配送费不能为空</string>
+    <string name="full_delivery_fee_notnull">满免配送费不能为空</string>
+    <string name="serial_number_notnull">序列号不能为空</string>
+    <string name="takeout_settings">外卖设置</string>
+    <string name="classified_list">分类列表</string>
+    <string name="table_list">桌台列表</string>
+    <string name="details">详情</string>
+    <string name="shopmanager">店铺管理</string>
+
+    <string name="phonenb_notnull">电话号码不能为空</string>
+    <string name="phone_nbgs_incorrect">手机号格式不正确</string>
+    <string name="shop_nb_notnull">店铺编号不能为空</string>
+    <string name="shop_name_notnull">店铺名称不能为空</string>
+    <string name="shop_address_notnull">店铺地址不能为空</string>
+    <string name="amount_collected">收款金额</string>
+    <string name="sales_order">销售订单</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechat">微信</string>
+    <string name="cash">现金</string>
+
+    <string name="all">全部</string>
+    <string name="completed">已完成</string>
+    <string name="hang_in_the_air">未完成</string>
+    <string name="canteen">食堂</string>
+    <string name="takeout">外卖</string>
+    <string name="today">今天</string>
+    <string name="nearly_three_days">近三天</string>
+    <string name="nearly_one_week">近一周</string>
+    <string name="nearly_one_month">近一个月</string>
+    <string name="optional">自选</string>
+
+    <string name="modify_two_dimensional_code_information">修改二维码信息</string>
+    <string name="commodity_name_notnull">商品名称不能为空</string>
+    <string name="modify_password">修改密码</string>
+    <string name="oldpassword_notnull">旧密码不能为空</string>
+    <string name="newpassword_notnull">新密码不能为空</string>
+    <string name="confirmation_passwordnotnull">确认密码不能为空</string>
+    <string name="newpassword_confirmation_password_not_consistent">新密码和确认密码不一致</string>
+    <string name="modify_data">修改资料</string>
+    <string name="address_notnull">地址不能为空</string>
+    <string name="nicknames_cannot_be_empty">联系人不能为空</string>
+
+    <string name="set_gesture_password">设置手势密码</string>
+    <string name="please_draw_gesture_password">请绘制手势密码</string>
+    <string name="modify_gesture_password">修改手势密码</string>
+    <string name="please_draw_confirmation_gesture_password">请绘制确认手势密码</string>
+    <string name="confirm_the_gesture_password_error_please_redraw_the_gesture_password">确认手势密码错误,请重新绘制手势密码</string>
+    <string name="please_draw_gesture_newpassword">请绘制新手势密码</string>
+    <string name="password_error_please_re_enter">密码错误,请重新输入</string>
+    <string name="reservation_order_list">预定订单列表</string>
+    <string name="merchant_name_cannot_be_empty">商户名称不能为空</string>
+    <string name="contacts_cannot_be_empty">联系人不能为空</string>
+
+    <string name="phonenumber_cannot_be_empty">手机号不能为空</string>
+    <string name="verification_code_cannot_be_null">验证码不能为空</string>
+    <string name="enter_password_again_not_empty">再次输入密码不能为空</string>
+    <string name="please_agree_to_the_agreement">请同意协议</string>
+    <string name="two_dimensional_code_details">二维码详情</string>
+    <string name="qr_code_management">二维码管理</string>
+    <string name="mistake_in_the_picture_format">图片格式有误</string>
+    <string name="product_list">产品列表</string>
+    <string name="shelves">上架</string>
+    <string name="off_the_shelf">下架</string>
+
+    <string name="non_fixed_amount_two_dimensional_code">非固定金额二维码</string>
+    <string name="employee_management">员工管理</string>
+    <string name="please_connect_to_WiFi">请连接网络</string>
+    <string name="press_the_exit_program_again">再按一次退出程序</string>
+    <string name="prompt">提示</string>
+    <string name="are_you_sure_you_want_to_quit">您确定要退出吗？</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="get_code">获取验证码</string>
+    <string name="fixed_amount_two_dimensional_code">固定金额二维码</string>
+    <string name="nonfixed_amount_two_dimensional_code">非固定金额二维码</string>
+
+
+    <string name="mailbox_settings">邮箱设置</string>
+    <string name="mailbox_cannot_be_empty">邮箱不能为空</string>
+    <string name="mailbox_format_is_incorrect">邮箱格式不正确</string>
+    <string name="count">统计</string>
+    <string name="add_categories">添加分类</string>
+    <string name="category_name_cannot_be_null">分类名称不能为空</string>
+    <string name="class_number_cannot_be_null">类别编号不能为空</string>
+    <string name="sorting_cannot_be_null">排序不能为空</string>
+    <string name="add_table">添加桌台</string>
+    <string name="add_product">添加产品</string>
+
+    <string name="remarks">备注</string>
+    <string name="market_price_can_not_be_empty">市场价不能为空</string>
+    <string name="selling_price_cannot_be_empty">销售价不能为空</string>
+    <string name="product_name_cannot_be_empty">产品名称不能为空</string>
+    <string name="product_number_cannot_be_null">产品编号不能为空</string>
+    <string name="product_category_cannot_be_null">产品分类不能为空</string>
+    <string name="modify">修改</string>
+    <string name="name_cannot_be_null">名字不能为空</string>
+    <string name="account_settings">账户设置</string>
+
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/gridview_imageview"
+            android:layout_width="53dp"
+            android:padding="@dimen/height5"
+            android:layout_height="53dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/dc_0" />
+
+
+        <TextView
+            android:id="@+id/gridview_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black3"
+            android:text="1桌位"/>
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border_gray"
+        android:scaleType="center"
+        android:src="@mipmap/hwzy"
+        android:visibility="gone"/>
+    <!--android:paddingBottom="@dimen/height6"-->
+    <!--android:paddingLeft="6dp"-->
+    <!--android:paddingRight="6dp"-->
+    <!--android:paddingTop="@dimen/height6"-->
+</RelativeLayout>

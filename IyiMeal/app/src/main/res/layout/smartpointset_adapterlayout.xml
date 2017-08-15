@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white2"
+    android:layout_height="match_parent">
+    <!--android:background="@color/white2"-->
+    <RelativeLayout
+        android:id="@+id/rlll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/shang"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="@dimen/height5"
+            android:layout_marginLeft="@dimen/height10"
+            android:layout_marginRight="@dimen/height10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="5"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="人套餐" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/height10"
+                android:layout_weight="1"
+                android:text="套餐名"
+                android:textSize="@dimen/height13" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5人实惠"
+                android:textColor="@color/black"
+                android:textSize="@dimen/height13" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right">
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@android:color/transparent"
+                    android:button="@drawable/toggle_btn"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shang"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/graydb" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heng">
+
+            <jdhe.iyibank.com.iyimeal.costomview.XCFlowLayout
+                android:id="@+id/flowlayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/height10"
+                android:layout_marginRight="@dimen/height10">
+
+            </jdhe.iyibank.com.iyimeal.costomview.XCFlowLayout>
+
+            <LinearLayout
+                android:id="@+id/deletell"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/flowlayout"
+                android:layout_marginBottom="@dimen/height15"
+                android:layout_marginLeft="@dimen/height20"
+                android:layout_marginRight="@dimen/height20"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/height10"
+                    android:background="@drawable/border_edit_wrirh"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textSize="@dimen/height13" />
+
+                <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="@dimen/height13"-->
+                <!--android:text="人数：12" />-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/beij"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlll"
+        android:layout_alignTop="@+id/rlll"
+        android:visibility="gone"
+        android:background="@color/gray_aa_tm"
+        android:orientation="horizontal"></LinearLayout>
+</RelativeLayout>

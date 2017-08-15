@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_smart_point_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/huif5"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/view_top" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/height15"
+    android:background="@color/white2"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/height5"
+        android:paddingLeft="@dimen/height20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="账号"
+            android:textColor="@color/gray_9"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/phone_zh"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入"
+            android:singleLine="true"
+            android:textColor="@color/black3"
+            android:textColorHint="@color/bg_gray"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <include layout="@layout/border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/height5"
+        android:paddingLeft="@dimen/height20"
+        android:layout_marginTop="@dimen/height5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="姓名"
+            android:textColor="@color/gray_9"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入"
+            android:singleLine="true"
+            android:textColor="@color/black3"
+            android:textColorHint="@color/bg_gray"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <include layout="@layout/border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/height5"
+        android:paddingLeft="@dimen/height20"
+        android:layout_marginTop="@dimen/height5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="密码"
+            android:textColor="@color/gray_9"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/black3"
+            android:textColorHint="@color/bg_gray"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <include layout="@layout/border" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/height5"
+        android:paddingLeft="@dimen/height20"
+        android:layout_marginRight="@dimen/height10"
+        android:layout_marginTop="@dimen/height5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="权限"
+            android:textColor="@color/gray_9"
+            android:textSize="15dp" />
+
+        <jdhe.iyibank.com.iyimeal.costomview.XCFlowLayout
+            android:id="@+id/flowlayout"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="150dp" >
+
+        </jdhe.iyibank.com.iyimeal.costomview.XCFlowLayout>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_member_management_modification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#263238"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/height10"
+            android:layout_marginRight="@dimen/height10"
+            android:layout_marginTop="@dimen/height10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/height16"
+                android:layout_weight="1"
+                android:text="老房子餐饮集团"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="手机号： 15965642536"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/height10"
+            android:layout_marginRight="@dimen/height10"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/height14"
+                android:layout_weight="1"
+                android:text="已经开通 1 年"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/height10"
+                android:text="有效期：2017-02-04 20：10：05"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/height10"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/height10"
+        android:paddingLeft="@dimen/height10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/height12"
+            android:text="开通产品"
+            android:textColor="@color/black3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height15"
+            android:textSize="@dimen/height13"
+            android:text="云餐饮系统（单机版）"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/height2"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_marginRight="@dimen/height10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/height13"
+            android:text="请选择购买天数"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height15"
+            android:textSize="@dimen/height12"
+            android:text="单价（2/天）"
+            android:textColor="@color/black3" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/height2"
+        android:paddingBottom="@dimen/height5"
+        android:paddingTop="@dimen/height5"
+        android:paddingRight="@dimen/height10"
+        android:paddingLeft="@dimen/height10"
+        >
+
+        <jdhe.iyibank.com.iyimeal.costomview.ExpandGridView
+            android:id="@+id/grid_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:horizontalSpacing="10dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dip"
+            android:padding="0.5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/height10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/height10"
+        android:paddingRight="@dimen/height10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/height12"
+            android:text="折扣："
+            android:textColor="@color/black3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height5"
+            android:textSize="@dimen/height13"
+            android:text="5 折"
+            android:textColor="@color/redff52" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height30"
+            android:textSize="@dimen/height12"
+            android:text="总价："
+            android:textColor="@color/black3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height5"
+            android:textSize="@dimen/height15"
+            android:text="￥ 399.00"
+            android:textColor="@color/redff52" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/height3"
+            android:paddingBottom="@dimen/height3"
+            android:paddingRight="@dimen/height10"
+            android:paddingLeft="@dimen/height10"
+            android:layout_marginLeft="@dimen/height15"
+            android:textSize="@dimen/height10"
+            android:text="已优惠35元"
+            android:background="@drawable/brand_red_50"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/height2"
+        android:layout_marginLeft="@dimen/height10"
+        android:layout_marginRight="@dimen/height10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/height12"
+            android:text="付款方式"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/height5"
+        android:layout_height="match_parent">
+        <jdhe.iyibank.com.iyimeal.costomview.ExpandListView
+            android:id="@+id/expandlsitView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/gray"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="vertical" />
+    </ScrollView>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/zhifubao"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="@dimen/height2"-->
+        <!--android:background="@color/white2"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginBottom="@dimen/height20"-->
+            <!--android:layout_marginLeft="@dimen/height10"-->
+            <!--android:layout_marginTop="@dimen/height20"-->
+            <!--android:src="@mipmap/zhifubao" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/zfzb"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/height14"-->
+            <!--android:textColor="@color/black3"-->
+            <!--android:gravity="center"-->
+            <!--android:text="支付宝" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical">-->
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginRight="@dimen/height20"-->
+                <!--android:src="@mipmap/right" />-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/zfmoney"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="金额：￥100" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/zfsales"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="销售：100单" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+</LinearLayout>
