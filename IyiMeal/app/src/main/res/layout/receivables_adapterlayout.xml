@@ -31,6 +31,7 @@
             android:background="@color/yellow67"></View>
 
         <TextView
+            android:id="@+id/youhui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

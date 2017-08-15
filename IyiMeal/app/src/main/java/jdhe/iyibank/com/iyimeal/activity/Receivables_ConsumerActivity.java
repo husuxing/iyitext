@@ -44,20 +44,20 @@ public class Receivables_ConsumerActivity extends BaseActivity {
         youhuij.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Receivables_ConsumerActivity.this, DialogActivity.class)
-                        .putExtra("title", "使用优惠券").putExtra("msg", "单位：元")
-                        .putExtra("isbutton", true).putExtra("isyouhuijll", "0")
-                );
+//                startActivity(new Intent(Receivables_ConsumerActivity.this, DialogActivity.class)
+//                        .putExtra("title", "使用优惠券").putExtra("msg", "单位：元")
+//                        .putExtra("isbutton", true).putExtra("isyouhuijll", "0")
+//                );
             }
         });
         zhek = (RelativeLayout) findViewById(R.id.zhek);
         zhek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Receivables_ConsumerActivity.this, DialogActivity.class)
-                        .putExtra("title", "请选择折扣").putExtra("msg", "")
-                        .putExtra("isbutton", true).putExtra("iszhekourl", "0")
-                );
+//                startActivity(new Intent(Receivables_ConsumerActivity.this, DialogActivity.class)
+//                        .putExtra("title", "请选择折扣").putExtra("msg", "")
+//                        .putExtra("isbutton", true).putExtra("iszhekourl", "0")
+//                );
             }
         });
         moling = (RelativeLayout) findViewById(R.id.moling);

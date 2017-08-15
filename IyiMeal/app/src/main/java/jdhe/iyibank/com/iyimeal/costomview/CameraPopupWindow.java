@@ -42,7 +42,6 @@ public class CameraPopupWindow extends PopupWindow implements View.OnClickListen
         super(context);
         try {
             activity=context;
-
             mDestinationUri = Uri.fromFile(new File(activity.getCacheDir(), System.currentTimeMillis()+SAMPLE_CROPPED_IMAGE_NAME));
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
