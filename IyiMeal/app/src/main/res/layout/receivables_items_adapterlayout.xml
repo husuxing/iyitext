@@ -17,6 +17,7 @@
             android:layout_weight="2"
             android:paddingLeft="@dimen/height10"
             android:gravity="center_vertical"
+            android:textColor="@color/black3"
             android:text="五花肉"
             android:textSize="14dp" />
 
@@ -26,6 +27,7 @@
             android:layout_weight="1"
             android:paddingLeft="@dimen/height10"
             android:gravity="center_vertical"
+            android:textColor="@color/black3"
             android:text="一号"
             android:textSize="14dp" />
 
@@ -42,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="￥ "
+                android:textColor="@color/black3"
                 android:textSize="16dp" />
 
             <TextView

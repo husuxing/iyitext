@@ -187,10 +187,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@null"
-                            android:hint="天地一号"
+                            android:hint="请输入"
+                            android:textColor="@color/white2"
                             android:paddingLeft="@dimen/height5"
                             android:textSize="13dp"
-                            android:textColorHint="#fff" />
+                            android:textColorHint="@color/gray" />
 
                         <ImageView
                             android:id="@+id/title_sc1"

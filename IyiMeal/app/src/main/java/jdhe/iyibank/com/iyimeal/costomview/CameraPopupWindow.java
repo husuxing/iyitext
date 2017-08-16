@@ -1,13 +1,17 @@
 package jdhe.iyibank.com.iyimeal.costomview;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,8 +22,12 @@ import android.widget.TextView;
 
 
 import com.yalantis.ucrop.UCrop;
+import com.zhy.base.fileprovider.FileProvider7;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import jdhe.iyibank.com.iyimeal.R;
 
@@ -27,11 +35,11 @@ import jdhe.iyibank.com.iyimeal.R;
 /**
  * Created by Administrator on 2017/1/12.
  */
-public class CameraPopupWindow extends PopupWindow implements View.OnClickListener{
+public class CameraPopupWindow extends PopupWindow implements View.OnClickListener {
 
     private TextView biaot;
-    private Button btnUpload, btnEdit, btnRecord,btnCancel;
-    private View mMenuView,kong;
+    private Button btnUpload, btnEdit, btnRecord, btnCancel;
+    private View mMenuView, kong;
     private Activity activity;
     public static Uri photoUri;
     private File file;
@@ -41,12 +49,12 @@ public class CameraPopupWindow extends PopupWindow implements View.OnClickListen
     public CameraPopupWindow(Activity context, View.OnClickListener itemsOnClick, String type) {
         super(context);
         try {
-            activity=context;
-            mDestinationUri = Uri.fromFile(new File(activity.getCacheDir(), System.currentTimeMillis()+SAMPLE_CROPPED_IMAGE_NAME));
+            activity = context;//
+            mDestinationUri = FileProvider7.getUriForFile(context, new File(activity.getCacheDir(), System.currentTimeMillis() + SAMPLE_CROPPED_IMAGE_NAME));//
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             mMenuView = inflater.inflate(R.layout.diy_zone_items_pop, null);
-            kong= mMenuView.findViewById(R.id.kon);
+            kong = mMenuView.findViewById(R.id.kon);
             kong.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -113,6 +121,7 @@ public class CameraPopupWindow extends PopupWindow implements View.OnClickListen
         }
 
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -120,7 +129,8 @@ public class CameraPopupWindow extends PopupWindow implements View.OnClickListen
 //                requestPermission(1, Manifest.permission.CAMERA, new Runnable() {
 //                    @Override
 //                    public void run() {
-                        takePhoto();
+                takePhoto();
+
 //                    }
 //                }, new Runnable() {
 //                    @Override
@@ -140,36 +150,63 @@ public class CameraPopupWindow extends PopupWindow implements View.OnClickListen
         }
     }
 
-    /**从相册取**/
+    /**
+     * 从相册取
+     **/
     private void pickFromGallery() {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        activity.startActivityForResult(Intent.createChooser(intent, "Select Picture"), 0x01);
+        if (ContextCompat.checkSelfPermission(//必不可少
+                activity, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    1);
+        } else {
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            activity.startActivityForResult(Intent.createChooser(intent, "Select Picture"), 0x01);
 
+        }
     }
-    /**拍照**/
-    private void takePhoto() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        file = new File(Environment.getExternalStorageDirectory(), System.currentTimeMillis() + "camera.jpg");
-        photoUri = Uri.fromFile(file);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-        activity.startActivityForResult(intent, 1008);
 
-//        Intent intentm = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        file = new File(Environment.getExternalStorageDirectory(), System.currentTimeMillis() + "camera.jpg");
-//        photoUri = Uri.fromFile(file);
-//        intentm.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-//        startActivityForResult(intentm, REQUEST_CODE_CAMERA);
+
+    /**
+     * 拍照
+     **/
+    private void takePhoto() {
+        if (ContextCompat.checkSelfPermission(//必不可少
+                activity, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    1);
+        } else {
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            file = new File(Environment.getExternalStorageDirectory(), System.currentTimeMillis() + "camera.jpg");
+            photoUri = FileProvider7.getUriForFile(activity, file);//FileProvider7.getUriForFile(activity   Uri.fromFile
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+            activity.startActivityForResult(intent, 1008);
+        }
+
+
+//        if (intent.resolveActivity(activity.getPackageManager()) != null) {
+//            String filename = new SimpleDateFormat("yyyyMMdd-HHmmss", Locale.CHINA)
+//                    .format(new Date()) + ".png";
+//            File file = new File(Environment.getExternalStorageDirectory(), filename);
+//
+//            Uri fileUri = FileProvider7.getUriForFile(activity, file);
+//
+//            intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+//        }
+
+
     }
 
     public void startCropActivity(@NonNull Uri uri) {
 //        switch (index) {
 //            case 0:
-                UCrop.of(uri, mDestinationUri)
-                        .withAspectRatio(1, 1)
-                        .start(activity);
+        UCrop.of(uri, mDestinationUri)
+                .withAspectRatio(1, 1)
+                .start(activity);
 //                break;
 //            case 1:
 //                UCrop.of(uri, mDestinationUri)

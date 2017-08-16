@@ -1,8 +1,11 @@
 package jdhe.iyibank.com.iyimeal.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.yalantis.ucrop.UCrop;
+import com.zhy.base.fileprovider.FileProvider7;
 
 import java.io.File;
 
@@ -18,6 +22,7 @@ import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
 import jdhe.iyibank.com.iyimeal.costomview.CameraPopupWindow;
 import jdhe.iyibank.com.iyimeal.util.LogTool;
+import jdhe.iyibank.com.iyimeal.util.ToastUtils;
 
 public class AddFoodActivity extends BaseActivity implements View.OnClickListener {
     private CameraPopupWindow mPopWindow;
@@ -47,7 +52,7 @@ public class AddFoodActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void initview() {
-        comfirmBtn= (Button) findViewById(R.id.comfirmBtn);
+        comfirmBtn = (Button) findViewById(R.id.comfirmBtn);
         image = (ImageView) findViewById(R.id.imageiv);
         imagell = (RelativeLayout) findViewById(R.id.imagell);
         onclickWay();
@@ -121,10 +126,34 @@ public class AddFoodActivity extends BaseActivity implements View.OnClickListene
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
     @Override
     public int[] hideSoftByEditViewIds() {
         int[] ids = {R.id.chinese_name, R.id.english_name, R.id.pinying, R.id.product_nmb, R.id.product_xh, R.id.product_unitprice
-       ,R.id.consumerprice, R.id.Special_Offer, R.id.measurement_unit, R.id.subordinate_classification, R.id.dishes_specifications };
+                , R.id.consumerprice, R.id.Special_Offer, R.id.measurement_unit, R.id.subordinate_classification, R.id.dishes_specifications};
         return ids;
+    }
+
+    @Override
+
+    public void onRequestPermissionsResult
+            (int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                //权限获取成功
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                file = new File(Environment.getExternalStorageDirectory(), System.currentTimeMillis() + "camera.jpg");
+                photoUri = FileProvider7.getUriForFile(this, file);//FileProvider7.getUriForFile(activity   Uri.fromFile
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                startActivityForResult(intent, 1008);
+
+            } else {
+                //权限被拒绝
+                ToastUtils.makeText(this,"Permission Denied");
+            }
+
+        }
+
     }
 }
