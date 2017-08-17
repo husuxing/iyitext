@@ -83,13 +83,13 @@ public class BaseMessageFrament extends Fragment{
         areasetll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), AreaAetActivity.class));
+                startActivity(new Intent(getActivity(), AreaAetActivity.class).putExtra("who","BaseMessageFrament"));
             }
         });
         tableset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), TableSetActivity.class));
+                startActivity(new Intent(getActivity(), TableSetActivity.class).putExtra("who","BaseMessageFrament"));
             }
         });
         shiftset.setOnClickListener(new View.OnClickListener() {

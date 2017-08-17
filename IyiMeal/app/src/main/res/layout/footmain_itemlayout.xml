@@ -13,7 +13,6 @@
         android:layout_width="18dp"
         android:id="@+id/delete"
         android:layout_height="18dp"
-        android:visibility="gone"
         android:layout_marginLeft="@dimen/height10"
         android:src="@mipmap/delete" />
 

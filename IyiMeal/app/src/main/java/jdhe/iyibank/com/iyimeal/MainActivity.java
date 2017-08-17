@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import jdhe.iyibank.com.iyimeal.activity.AreaAetActivity;
 import jdhe.iyibank.com.iyimeal.activity.HandPasswordActivity;
 import jdhe.iyibank.com.iyimeal.activity.RegisterActivity;
 import jdhe.iyibank.com.iyimeal.activity.Reset_PasswordActivity;
@@ -46,7 +47,8 @@ public class MainActivity extends BaseActivity {
         loginBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HandPasswordActivity.class));
+                startActivity(new Intent(MainActivity.this, AreaAetActivity.class).putExtra("who","MainActivity"));
+//                startActivity(new Intent(MainActivity.this, HandPasswordActivity.class));
 //                finish();
             }
         });

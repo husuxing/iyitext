@@ -18,17 +18,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.adapter.FragmentAdapter;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
+import jdhe.iyibank.com.iyimeal.entity.FoodListItemData;
 import jdhe.iyibank.com.iyimeal.fragment.AddProductFrament;
 import jdhe.iyibank.com.iyimeal.fragment.FootMaintenanceFragment;
 
 public class FoodMaintenanceActivity extends BaseActivity {
     ViewPager fragmentViewPager;
     ListView leftListView;
-    private ArrayList<String> leftlist;
+    private ArrayList<FoodListItemData> leftlist;
     private LeftAdapter leftAdapter;
     private ArrayList<Fragment> fragmentlist;
     private FootMaintenanceFragment fragment1;
@@ -42,11 +44,19 @@ public class FoodMaintenanceActivity extends BaseActivity {
         initTitle();
         logo.setVisibility(View.GONE);
 //        title_sc.setVisibility(View.VISIBLE);
-        mBaseTitle.setText("开始点菜");
+        mBaseTitle.setText("菜品维护");
         initview();
     }
 
     private void initview() {
+            title_wen.setVisibility(View.VISIBLE);
+            title_wen.setText("完成");
+            title_wen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(FoodMaintenanceActivity.this,HomeActivity.class));
+                }
+            });
         resetall = (TextView) findViewById(R.id.resetall);
         sureall = (TextView) findViewById(R.id.sureall);
         resetall.setOnClickListener(new View.OnClickListener() {
@@ -86,12 +96,16 @@ public class FoodMaintenanceActivity extends BaseActivity {
     }
 
     public void initDatas() {
-        leftlist = new ArrayList<String>();
+        leftlist=new ArrayList<FoodListItemData>();
+        FoodListItemData foodListItemData1 = new FoodListItemData("川菜", "1");
+        leftlist.add(foodListItemData1);
         for (int i = 0; i < 5; i++) {
-            leftlist.add("第" + i + "个");
+
+            FoodListItemData foodListItemData = new FoodListItemData("川菜", "0");
+            leftlist.add(foodListItemData);
         }
 
-        leftAdapter = new LeftAdapter(this);
+        leftAdapter = new LeftAdapter(this,leftlist);
         leftListView.setAdapter(leftAdapter);
         leftListView.setDividerHeight(0);
         // listview点击事件
@@ -161,19 +175,22 @@ public class FoodMaintenanceActivity extends BaseActivity {
     static class LeftAdapter extends BaseAdapter {
         private Activity activity;
         private ImageView delete;
+        private View heng;
+        private List<FoodListItemData> list;
 
-        LeftAdapter(Activity activity) {
+        LeftAdapter(Activity activity, List<FoodListItemData> list) {
             this.activity = activity;
+            this.list = list;
         }
 
         @Override
         public int getCount() {
-            return 10;
+            return list.size();
         }
 
         @Override
         public Object getItem(int i) {
-            return i;
+            return list.get(i);
         }
 
         @Override
@@ -185,6 +202,7 @@ public class FoodMaintenanceActivity extends BaseActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             View view1 = LayoutInflater.from(activity).inflate(R.layout.footmain_itemlayout, null, false);
             delete = (ImageView) view1.findViewById(R.id.delete);
+            heng = view1.findViewById(R.id.heng);
             delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -194,7 +212,20 @@ public class FoodMaintenanceActivity extends BaseActivity {
                     );
                 }
             });
+            if ("1".equals(list.get(i).getIsHneg())) {
+                heng.setVisibility(View.VISIBLE);
+            }else {
+                heng.setVisibility(View.GONE);
+            }
             return view1;
+        }
+
+        public void setViewHeng(int position) {
+            for(FoodListItemData foodListItemData:list){
+                foodListItemData.setIsHneg("0");
+            }
+            list.get(position).setIsHneg("1");
+            notifyDataSetChanged();
         }
 
 

@@ -1,10 +1,17 @@
 package jdhe.iyibank.com.iyimeal.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.bumptech.glide.Glide;
+import com.yalantis.ucrop.UCrop;
+
+import java.io.File;
+import java.util.ArrayList;
 
 import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
 import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
@@ -13,14 +20,17 @@ import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.adapter.AreaSetAdapter;
 import jdhe.iyibank.com.iyimeal.adapter.ConsumerDetailsAdapter;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
+import jdhe.iyibank.com.iyimeal.entity.AreaBean;
 
-public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BGARefreshLayoutDelegate{
+public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BGARefreshLayoutDelegate {
 
     private ListView listView;
     private AreaSetAdapter areaSetAdapter;
     private BGARefreshLayout mRefreshLayout;
 
     private Button comfirmBtn;
+    private String who;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +42,26 @@ public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BG
     }
 
     private void initview() {
-        comfirmBtn= (Button) findViewById(R.id.comfirmBtn);
+        who = getIntent().getExtras().getString("who", "");
+        if ("MainActivity".equals(who)) {
+            title_wen.setVisibility(View.VISIBLE);
+            title_wen.setText("下一步");
+            title_wen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(AreaAetActivity.this, TableSetActivity.class).putExtra("who", "AreaAetActivity"));
+                }
+            });
+        }
+        ArrayList<AreaBean> areaBeens = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            AreaBean areaBean = new AreaBean("大厅");
+            areaBeens.add(areaBean);
+        }
+
+        comfirmBtn = (Button) findViewById(R.id.comfirmBtn);
         listView = (ListView) findViewById(R.id.listview);
-        areaSetAdapter = new AreaSetAdapter(this);
+        areaSetAdapter = new AreaSetAdapter(this, areaBeens);
         listView.setAdapter(areaSetAdapter);
         mRefreshLayout = (BGARefreshLayout) findViewById(
                 R.id.refresh);
@@ -44,9 +71,9 @@ public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BG
         comfirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AreaAetActivity.this, DialogActivity.class)
+                startActivityForResult(new Intent(AreaAetActivity.this, DialogActivity.class)
                         .putExtra("title", "请输入区域名称").putExtra("msg", "")
-                        .putExtra("isbutton", true).putExtra("isedit", "0")
+                        .putExtra("isbutton", true).putExtra("isedit", "0"), 100
                 );
             }
         });
@@ -54,11 +81,36 @@ public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BG
 
     @Override
     public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout bgaRefreshLayout) {
-        
+
     }
 
     @Override
     public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout bgaRefreshLayout) {
         return false;
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        try {
+            if (resultCode == RESULT_OK) {
+                if (requestCode == 100) {
+                    String name = data.getExtras().getString("areaname", "");
+                    addArea(name);
+                }
+                if (requestCode == 101) {
+                    String position = data.getExtras().getString("position", "");
+                    areaSetAdapter.deleteArea(Integer.valueOf(position));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void addArea(String name) {
+        AreaBean areaBean =new AreaBean(name);
+        areaSetAdapter.addArea(areaBean);
+    }
+
 }

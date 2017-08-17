@@ -9,8 +9,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.activity.DialogActivity;
+import jdhe.iyibank.com.iyimeal.entity.AreaBean;
 
 /**
  * Created by Administrator on 2017/8/4.
@@ -18,20 +22,22 @@ import jdhe.iyibank.com.iyimeal.activity.DialogActivity;
 
 public class AreaSetAdapter extends BaseAdapter {
     private Activity context;
+    private ArrayList<AreaBean> areaBeens;
 
-    public AreaSetAdapter(Activity context) {//, List<User> users, boolean isNearPeople) {
+    public AreaSetAdapter(Activity context,ArrayList<AreaBean> areaBeens) {//, List<User> users, boolean isNearPeople) {
         this.context = context;
+        this.areaBeens = areaBeens;
 
     }
 
     @Override
     public int getCount() {
-        return 5;
+        return areaBeens.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return position;
+        return areaBeens.get(position);
     }
 
     @Override
@@ -48,20 +54,21 @@ public class AreaSetAdapter extends BaseAdapter {
             myViewHolder = new Holder();
             convertView = View.inflate(context, R.layout.areasetadapterlayout, null);
             myViewHolder.delete = (TextView) convertView.findViewById(R.id.delete);
+            myViewHolder.areaname = (TextView) convertView.findViewById(R.id.areaname);
             convertView.setTag(myViewHolder);
         } else {
             myViewHolder = (Holder) convertView.getTag();
         }
-
+        myViewHolder.areaname.setText(areaBeens.get(position).getName());
 //        TextPaint paint = myViewHolder.name.getPaint();
 //        paint.setFakeBoldText(true);
 //        final Holder finalMyViewHolder = myViewHolder;
         myViewHolder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, DialogActivity.class)
+                context.startActivityForResult(new Intent(context, DialogActivity.class)
                         .putExtra("title", "提示").putExtra("msg", "是否删除所选区域")
-                        .putExtra("isbutton", true)
+                        .putExtra("isbutton", true).putExtra("who","AreaSetAdapterdelete").putExtra("position",position+""),101
                 );
             }
         });
@@ -71,11 +78,20 @@ public class AreaSetAdapter extends BaseAdapter {
     static class Holder {
         LinearLayout cxbj;
         private ImageView cancle;
-        private TextView name;
+        private TextView areaname;
         private TextView number;
         private TextView xiaolian;
         private TextView delete;
         private TextView state;
+    }
+
+    public void addArea(AreaBean areaBean){
+        areaBeens.add(areaBean);
+        notifyDataSetChanged();
+    }
+    public void deleteArea(int position) {
+        areaBeens.remove(position);
+        notifyDataSetChanged();
     }
 }
 

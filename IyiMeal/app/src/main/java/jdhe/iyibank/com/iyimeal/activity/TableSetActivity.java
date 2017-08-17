@@ -20,6 +20,7 @@ public class TableSetActivity extends BaseActivity implements BGARefreshLayout.B
     private TableSetAdapter tableSetAdapter;
     private BGARefreshLayout mRefreshLayout;
     private TextView resetall,delete;
+    String who;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,17 @@ public class TableSetActivity extends BaseActivity implements BGARefreshLayout.B
     }
 
     private void initview() {
+        who=getIntent().getExtras().getString("who","");
+        if("AreaAetActivity".equals(who)){
+            title_wen.setVisibility(View.VISIBLE);
+            title_wen.setText("下一步");
+            title_wen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(TableSetActivity.this,FoodMaintenanceActivity.class));
+                }
+            });
+        }
         delete= (TextView) findViewById(R.id.delete);
         resetall= (TextView) findViewById(R.id.resetall);
         listView = (ListView) findViewById(R.id.listview);

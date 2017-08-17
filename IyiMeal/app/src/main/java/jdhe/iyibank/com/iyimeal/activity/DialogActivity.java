@@ -32,7 +32,9 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
     private ScrollView mScrollView, dialog_scrolllist;
     private EditText mEditText, mEdtCode;
     private RadioGroup mRadioGroup;
-    private String title, isnum, who, payId, isEdit, addcalss, issetMoneyll, isaddconsumer, iddialog_scrolllist, isyouhuijll, iszhekourl, isreceiabkles_shou, who_tab;
+    private String title, isnum, who, payId, isEdit, addcalss, issetMoneyll,
+            isaddconsumer, iddialog_scrolllist, isyouhuijll,
+            iszhekourl, isreceiabkles_shou, who_tab,position;
     private boolean isbutton;
     View heng;
     private LinearLayout addclassification, setMoneyll, addconsumer, youhuijll, receiabkles_shou;
@@ -79,7 +81,7 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
             if ("0".equals(iszhekourl)) {
                 zhekourl.setVisibility(View.VISIBLE);
             }
-
+            position = getIntent().getExtras().getString("position", "");
             iddialog_scrolllist = getIntent().getStringExtra("iddialog_scrolllist");
             if ("0".equals(iddialog_scrolllist)) {
                 dialog_scrolllist.setVisibility(View.VISIBLE);
@@ -158,6 +160,9 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
                     if ("delete".equals(who)) {
                         setResult(RESULT_OK, new Intent());
                     }
+                    if ("AreaSetAdapterdelete".equals(who)) {
+                        setResult(RESULT_OK, new Intent().putExtra("position",position+""));
+                    }
                     if ("ScanColletionActivity".equals(who)) {
                         String name = getIntent().getExtras().getString("payname");
                         setResult(RESULT_OK, new Intent().putExtra("payId", payId).putExtra("payname", name));
@@ -165,6 +170,9 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
                     if ("tab_main1".equals(who_tab)) {
                         Intent intent = new Intent(this, AddProductActivity.class).putExtra("who", "DialogActivity");//.putExtra("dataPosition", getIntent().getExtras().getInt("dataPosition")
                         startActivity(intent);
+                    }
+                    if ("0".equals(isEdit)) {
+                        setResult(RESULT_OK, new Intent().putExtra("areaname", mEditText.getText().toString()));
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
