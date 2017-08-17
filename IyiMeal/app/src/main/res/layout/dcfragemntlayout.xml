@@ -316,7 +316,15 @@
                         </LinearLayout>
                     </ScrollView>
                 </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+                <LinearLayout
+                    android:id="@+id/bghui"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:background="@color/huibg"
+                    android:layout_height="match_parent">
 
+                </LinearLayout>
                 <LinearLayout
                     android:id="@+id/recyclerll"
                     android:layout_width="wrap_content"

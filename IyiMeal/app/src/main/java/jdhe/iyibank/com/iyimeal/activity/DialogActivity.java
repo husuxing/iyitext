@@ -171,6 +171,10 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
                         Intent intent = new Intent(this, AddProductActivity.class).putExtra("who", "DialogActivity");//.putExtra("dataPosition", getIntent().getExtras().getInt("dataPosition")
                         startActivity(intent);
                     }
+                    if ("tab_main3".equals(who_tab)) {
+                        Intent intent = new Intent(this, AddProductActivity.class).putExtra("who", "DialogActivity");//.putExtra("dataPosition", getIntent().getExtras().getInt("dataPosition")
+                        startActivity(intent);
+                    }
                     if ("0".equals(isEdit)) {
                         setResult(RESULT_OK, new Intent().putExtra("areaname", mEditText.getText().toString()));
                     }

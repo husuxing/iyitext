@@ -103,8 +103,8 @@ public class ExpandGridViewAdapter extends BaseAdapter {
                             dcFragment.setTab_main(true, false, false, false,false);
                         } else if (tableGridViewDatas.get(position).getTag() == 1) {
                             dcFragment.setlianllState();
-                            context.startActivity(new Intent(context, AddProductActivity.class).putExtra("who","ExpandGridViewAdapter"));
-//                            dcFragment.setTab_main(false, false, false, false);
+//                            context.startActivity(new Intent(context, AddProductActivity.class).putExtra("who","ExpandGridViewAdapter"));
+                            dcFragment.setTab_main(true, false, true, false,false);
                         } else if (tableGridViewDatas.get(position).getTag() == 2) {
                             dcFragment.setTab_main(false, true, true, true,true);
                         }

@@ -64,7 +64,7 @@ public class DcFragment extends Fragment implements BGARefreshLayout.BGARefreshL
     static int[] imageid = {R.mipmap.zt,  R.mipmap.qxlt, R.mipmap.zjlt, R.mipmap.qxsy,};//R.mipmap.ft,
     static String[] imageName = {"转台", "追加连台", "取消连台", "取消所有"};//"分台",
     private TestRecyclerAdapter mAdapter;
-    private LinearLayout title_sc, chouti;
+    private LinearLayout title_sc, chouti,bghui;
     private RelativeLayout scRl, title;
     private Button comfirmBt, cancleBt;
     private ImageView jia, title_menu1;
@@ -83,6 +83,9 @@ public class DcFragment extends Fragment implements BGARefreshLayout.BGARefreshL
 //        tishici.setText(text);
 //        lianll.setVisibility(View.VISIBLE);
         linearLayout.setVisibility(View.GONE);
+        bghui.setVisibility(View.GONE);
+        Drawable rightDrawable = ContextCompat.getDrawable(getActivity(), R.drawable.jii);
+        jia.setImageDrawable(rightDrawable);
     }
 
     public void setTab_main(boolean main1, boolean main2, boolean main3, boolean main4, boolean jiab) {
@@ -106,6 +109,7 @@ public class DcFragment extends Fragment implements BGARefreshLayout.BGARefreshL
         tishici= (TextView) view.findViewById(R.id.tishici);
         cancleBt = (Button) view.findViewById(R.id.cancle);
         comfirmBt = (Button) view.findViewById(R.id.comfirmBt);
+        bghui = (LinearLayout) view.findViewById(R.id.bghui);
         title_back1 = (LinearLayout) view.findViewById(R.id.title_back1);
         chouti = (LinearLayout) view.findViewById(R.id.chouti);
         title_sc = (LinearLayout) view.findViewById(R.id.title_sc);
@@ -157,12 +161,14 @@ public class DcFragment extends Fragment implements BGARefreshLayout.BGARefreshL
                         linearLayout.setVisibility(View.GONE);
                         Drawable rightDrawable = ContextCompat.getDrawable(getActivity(), R.drawable.jii);
                         jia.setImageDrawable(rightDrawable);
+                        bghui.setVisibility(View.GONE);
 //                    rightDrawable.setBounds(0, 0, rightDrawable.getMinimumWidth(), rightDrawable.getMinimumHeight());
 //                    jia.setCompoundDrawables(null, null, rightDrawable, null);
                     } else {
                         linearLayout.setVisibility(View.VISIBLE);
                         Drawable rightDrawable = ContextCompat.getDrawable(getActivity(), R.drawable.jia);
                         jia.setImageDrawable(rightDrawable);
+                        bghui.setVisibility(View.VISIBLE);
 //                    rightDrawable.setBounds(0, 0, rightDrawable.getMinimumWidth(), rightDrawable.getMinimumHeight());
 //                    jia.setCompoundDrawables(null, null, rightDrawable, null);
                     }
@@ -197,7 +203,7 @@ public class DcFragment extends Fragment implements BGARefreshLayout.BGARefreshL
                 if (tab_main3.isSelected()) {
                     startActivity(new Intent(getContext(), DialogActivity.class)
                             .putExtra("title", "拼台：就餐人数").putExtra("msg", "")
-                            .putExtra("isbutton", true).putExtra("isedit", "0")
+                            .putExtra("isbutton", true).putExtra("isedit", "0").putExtra("who_tab", "tab_main3").putExtra("dataPosition",dataPosition)
                     );
                 }
             }

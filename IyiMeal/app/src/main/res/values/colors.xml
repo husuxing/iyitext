@@ -31,6 +31,7 @@
     <color name="gray_9">#999999</color>
     <color name="gray_6">#666666</color>
     <color name="gray_6_tm">#99dddddd</color>
+    <color name="huibg">#bbffffff</color>
     <color name="gray_96_tm">#99666666</color>
     <color name="gray_aa_tm">#aa222222</color>
     <!-- Android standard ICS color -->
