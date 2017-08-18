@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jdhe.iyibank.com.iyimeal.R;
+import jdhe.iyibank.com.iyimeal.activity.AreaAetActivity;
 import jdhe.iyibank.com.iyimeal.activity.DialogActivity;
 import jdhe.iyibank.com.iyimeal.entity.AreaBean;
 
@@ -72,6 +73,15 @@ public class AreaSetAdapter extends BaseAdapter {
                 );
             }
         });
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivityForResult(new Intent(context, DialogActivity.class)
+                        .putExtra("title", "修改区域名称").putExtra("msg", "")
+                        .putExtra("isbutton", true).putExtra("isedit", "0").putExtra("who","AreaSetAdapterdelete_2").putExtra("position",position+""),102
+                );
+            }
+        });
         return convertView;
     }
 
@@ -91,6 +101,10 @@ public class AreaSetAdapter extends BaseAdapter {
     }
     public void deleteArea(int position) {
         areaBeens.remove(position);
+        notifyDataSetChanged();
+    }
+    public void ressetAreaName(int position,String name) {
+        areaBeens.get(position).setName(name);
         notifyDataSetChanged();
     }
 }

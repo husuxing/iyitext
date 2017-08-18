@@ -167,6 +167,10 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
                     if ("AreaSetAdapterdelete".equals(who)) {
                         setResult(RESULT_OK, new Intent().putExtra("position",position+""));
                     }
+                    if ("AreaSetAdapterdelete_2".equals(who)) {
+                        setResult(RESULT_OK, new Intent().putExtra("position",position+"").putExtra("name",mEditText.getText().toString()));
+                    }
+
                     if ("ScanColletionActivity".equals(who)) {
                         String name = getIntent().getExtras().getString("payname");
                         setResult(RESULT_OK, new Intent().putExtra("payId", payId).putExtra("payname", name));
@@ -179,7 +183,8 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
                         Intent intent = new Intent(this, AddProductActivity.class).putExtra("who", "DialogActivity");//.putExtra("dataPosition", getIntent().getExtras().getInt("dataPosition")
                         startActivity(intent);
                     }
-                    if ("0".equals(isEdit)) {
+
+                    if ("0".equals(isEdit)&&"AreaAetActivity".equals(who)) {
                         setResult(RESULT_OK, new Intent().putExtra("areaname", mEditText.getText().toString()));
                     }
                 } catch (Exception e) {

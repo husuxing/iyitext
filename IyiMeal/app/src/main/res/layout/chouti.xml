@@ -40,6 +40,7 @@
 
             <TextView
                 android:id="@+id/cxsy"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:gravity="center"
@@ -66,6 +67,7 @@
                 android:layout_height="35dp"
                 android:gravity="center"
                 android:text="会员管理"
+                android:visibility="gone"
                 android:textColor="@color/black3"
                 android:textSize="@dimen/height13" />
 

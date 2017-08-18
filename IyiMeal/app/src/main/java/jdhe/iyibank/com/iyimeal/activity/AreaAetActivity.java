@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
+import com.orhanobut.logger.Logger;
 import com.yalantis.ucrop.UCrop;
 
 import java.io.File;
@@ -72,7 +73,7 @@ public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BG
             @Override
             public void onClick(View view) {
                 startActivityForResult(new Intent(AreaAetActivity.this, DialogActivity.class)
-                        .putExtra("title", "请输入区域名称").putExtra("msg", "")
+                        .putExtra("title", "请输入区域名称").putExtra("msg", "").putExtra("who", "AreaAetActivity")
                         .putExtra("isbutton", true).putExtra("isedit", "0"), 100
                 );
             }
@@ -100,6 +101,13 @@ public class AreaAetActivity extends BaseActivity implements BGARefreshLayout.BG
                 if (requestCode == 101) {
                     String position = data.getExtras().getString("position", "");
                     areaSetAdapter.deleteArea(Integer.valueOf(position));
+                }
+                if (requestCode == 102) {
+                    String position = data.getExtras().getString("position", "");
+
+                    String name = data.getExtras().getString("name", "");
+                    Logger.e(name+position);
+                    areaSetAdapter.ressetAreaName(Integer.valueOf(position),name);
                 }
             }
         } catch (Exception e) {
