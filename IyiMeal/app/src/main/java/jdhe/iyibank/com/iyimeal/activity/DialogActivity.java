@@ -160,6 +160,10 @@ public class DialogActivity extends BaseActivity implements OnClickListener {
                     if ("delete".equals(who)) {
                         setResult(RESULT_OK, new Intent());
                     }
+                    if ("BatchTablelistActivity".equals(who)) {
+                        Intent intent = new Intent(this, FoodMaintenanceActivity.class);//.putExtra("who", "DialogActivity");//.putExtra("dataPosition", getIntent().getExtras().getInt("dataPosition")
+                        startActivity(intent);
+                    }
                     if ("AreaSetAdapterdelete".equals(who)) {
                         setResult(RESULT_OK, new Intent().putExtra("position",position+""));
                     }

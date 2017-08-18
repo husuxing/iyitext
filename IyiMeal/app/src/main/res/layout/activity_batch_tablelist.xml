@@ -10,20 +10,21 @@
     <cn.bingoogolapple.refreshlayout.BGARefreshLayout
         android:id="@+id/refresh"
         android:layout_below="@id/view_top"
-        android:layout_above="@id/comfirmBtn"
+        android:layout_above="@id/bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-        <ListView
-            android:id="@+id/listview"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recyclerview"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:scrollbars="none"
             android:layout_weight="1"
-            android:layout_marginTop="@dimen/height5"
-            android:dividerHeight="@dimen/height10"
-            android:divider="#F5F5F5" />
+            android:layout_marginTop="@dimen/height1"
+           />
+        <!--android:dividerHeight="@dimen/height10"-->
+        <!--android:divider="#F5F5F5"-->
     </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,11 +41,12 @@
             android:layout_height="40dp"
             android:background="#673AB7"
             android:gravity="center"
-            android:text="批量添加"
+            android:text="确定"
             android:textColor="@color/white"
             android:textSize="16dp" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/delete"
             android:layout_width="0dp"
             android:layout_weight="1"

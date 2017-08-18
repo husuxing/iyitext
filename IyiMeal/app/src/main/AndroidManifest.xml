@@ -99,7 +99,9 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activity.AddAdminPermissionActivity" />
         <activity android:name=".activity.AddSmartPointActivity" />
-        <activity android:name=".activity.TurnTableActivity"></activity>
+        <activity android:name=".activity.TurnTableActivity" />
+        <activity android:name=".activity.BatchAddTableActivity" />
+        <activity android:name=".activity.BatchTablelistActivity"></activity>
     </application>
 
 </manifest>

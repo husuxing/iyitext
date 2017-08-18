@@ -56,16 +56,17 @@ public class TableSetActivity extends BaseActivity implements BGARefreshLayout.B
         resetall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TableSetActivity.this,AddTableActivity.class).putExtra("who",""));
+                startActivity(new Intent(TableSetActivity.this,BatchAddTableActivity.class).putExtra("who",""));
             }
         });
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TableSetActivity.this, DialogActivity.class)
-                        .putExtra("title", "提示").putExtra("msg", "是否删除所勾选桌台")
-                        .putExtra("isbutton", true)
-                );
+                startActivity(new Intent(TableSetActivity.this,AddTableActivity.class).putExtra("who",""));
+//                startActivity(new Intent(TableSetActivity.this, DialogActivity.class)
+//                        .putExtra("title", "提示").putExtra("msg", "是否删除所勾选桌台")
+//                        .putExtra("isbutton", true)
+//                );
             }
         });
     }
