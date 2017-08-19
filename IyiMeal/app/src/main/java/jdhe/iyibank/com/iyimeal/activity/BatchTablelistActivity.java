@@ -45,12 +45,15 @@ public class BatchTablelistActivity extends BaseActivity implements IBatchTablel
         initTitle();
         logo.setVisibility(View.GONE);
         mBaseTitle.setText("批量添加桌台");
-        initview();
+        try {
+            initview();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    private void initview() {
+    private void initview() throws Exception{
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         BatchAddTableBean batchAddTableBean = getIntent().getExtras().getParcelable("Bean");
         batchTablelistPresenter = new BatchTablelistPresenter(this);
         batchTablelistPresenter.setBatchBean(batchAddTableBean);
@@ -72,15 +75,15 @@ public class BatchTablelistActivity extends BaseActivity implements IBatchTablel
                 this, LinearLayoutManager.VERTICAL, R.drawable.divider_mileage));
         mHeaderAndFooterWrapper = new HeaderAndFooterWrapper(mAdapter);
         mLoadMoreWrapper = new LoadMoreWrapper(mHeaderAndFooterWrapper);
-        mLoadMoreWrapper.setLoadMoreView(R.layout.default_loading);
-        mLoadMoreWrapper.setOnLoadMoreListener(new LoadMoreWrapper.OnLoadMoreListener()
-        {
-            @Override
-            public void onLoadMoreRequested()
-            {
-                mLoadMoreWrapper.notifyDataSetChanged();
-            }
-        });
+//        mLoadMoreWrapper.setLoadMoreView(R.layout.default_loading);
+//        mLoadMoreWrapper.setOnLoadMoreListener(new LoadMoreWrapper.OnLoadMoreListener()
+//        {
+//            @Override
+//            public void onLoadMoreRequested()
+//            {
+//                mLoadMoreWrapper.notifyDataSetChanged();
+//            }
+//        });
         mRecyclerView.setAdapter(mLoadMoreWrapper);
     }
 

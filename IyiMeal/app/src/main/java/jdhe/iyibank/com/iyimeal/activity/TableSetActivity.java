@@ -33,7 +33,7 @@ public class TableSetActivity extends BaseActivity implements BGARefreshLayout.B
 
     private void initview() {
         who=getIntent().getExtras().getString("who","");
-        if("AreaAetActivity".equals(who)){
+        if("DialogActivity".equals(who)){//"AreaAetActivity".equals(who)||
             title_wen.setVisibility(View.VISIBLE);
             title_wen.setText("下一步");
             title_wen.setOnClickListener(new View.OnClickListener() {

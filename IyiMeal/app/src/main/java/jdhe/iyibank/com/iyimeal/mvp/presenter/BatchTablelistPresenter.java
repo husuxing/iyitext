@@ -23,7 +23,7 @@ public class BatchTablelistPresenter {
         iBatchTablelistModle = new BatchTablelistModle();
     }
 
-    public void setBatchBean(BatchAddTableBean batchAddTableBean) {
+    public void setBatchBean(BatchAddTableBean batchAddTableBean) throws Exception{
         ArrayList<BatchAddTableBean> batchAddTableBeens = new ArrayList<>();
         String area = batchAddTableBean.getAreaet();
         String down = batchAddTableBean.getDown_nub();

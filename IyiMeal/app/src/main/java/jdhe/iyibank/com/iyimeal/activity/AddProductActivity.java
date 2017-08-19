@@ -56,7 +56,7 @@ public class AddProductActivity extends BaseActivity implements View.OnClickList
         sureall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AddProductActivity.this,QueryModificationActivity.class));
+                startActivity(new Intent(AddProductActivity.this,QueryModificationActivity.class).putExtra("who","AddProductActivity"));
             }
         });
         zuotaill= (LinearLayout) findViewById(R.id.zuotaill);

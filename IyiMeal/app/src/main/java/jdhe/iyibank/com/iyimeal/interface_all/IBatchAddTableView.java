@@ -15,4 +15,5 @@ public interface IBatchAddTableView {
     String getRoomFee();
     String getMealFee();
     void startNextActivity(BatchAddTableBean batchAddTableBean);
+    void setAreaChoose(String area);
 }

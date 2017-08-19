@@ -67,6 +67,7 @@ public class ExpandGridViewAdapter extends BaseAdapter {
                 convertView = LayoutInflater.from(context).inflate(R.layout.dc_expandgridview_layout, null);
                 myViewHolder.mIv = (ImageView) convertView.findViewById(R.id.gridview_imageview);
                 myViewHolder.mtvg = (ImageView) convertView.findViewById(R.id.imageview);
+                myViewHolder.pin = (TextView) convertView.findViewById(R.id.pin);
                 convertView.setTag(myViewHolder);
             } else {
                 myViewHolder = (MyViewHolder) convertView.getTag();
@@ -123,7 +124,7 @@ public class ExpandGridViewAdapter extends BaseAdapter {
     }
 
     class MyViewHolder {
-        private TextView mTextName;
+        private TextView mTextName,pin;
         private ImageView mIv, mtvg;
 
     }

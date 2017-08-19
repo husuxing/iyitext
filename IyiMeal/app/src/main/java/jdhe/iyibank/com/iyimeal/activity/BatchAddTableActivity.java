@@ -1,15 +1,12 @@
 package jdhe.iyibank.com.iyimeal.activity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 import butterknife.BindView;
+import butterknife.OnClick;
 import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
 import jdhe.iyibank.com.iyimeal.entity.BatchAddTableBean;
@@ -21,7 +18,7 @@ public class BatchAddTableActivity extends BaseActivity implements IBatchAddTabl
     EditText nub;
 
     @BindView(R.id.areaet)
-    EditText areaet;
+    TextView areaet;
 
     @BindView(R.id.down_nub)
     EditText down_nub;
@@ -58,9 +55,13 @@ public class BatchAddTableActivity extends BaseActivity implements IBatchAddTabl
         });
     }
 
+    @OnClick(R.id.areaet)
+    public void setArea(View view){
+        batchAddTablePresenter.setAreaData(this,view);
+    }
     @Override
     public int[] hideSoftByEditViewIds() {
-        int[] ids = {R.id.nub, R.id.areaet, R.id.down_nub, R.id.room_charge, R.id.mealfee};
+        int[] ids = {R.id.nub, R.id.down_nub, R.id.room_charge, R.id.mealfee};// R.id.areaet,
         return ids;
     }
 
@@ -97,5 +98,10 @@ public class BatchAddTableActivity extends BaseActivity implements IBatchAddTabl
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public void setAreaChoose(String area) {
+        areaet.setText(area);
     }
 }

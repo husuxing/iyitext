@@ -32,7 +32,7 @@ String title;
 
     @Override
     public int[] hideSoftByEditViewIds() {
-        int[] ids = {R.id.account ,R.id.table,R.id.areaet,R.id.down_nub ,R.id.room_charge,R.id.mealfee};
+        int[] ids = {R.id.account ,R.id.table,R.id.table_abbreviation,R.id.areaet,R.id.down_nub ,R.id.room_charge,R.id.mealfee};
         return ids;
     }
 }

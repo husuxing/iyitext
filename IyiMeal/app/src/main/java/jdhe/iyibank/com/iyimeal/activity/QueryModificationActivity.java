@@ -29,7 +29,7 @@ public class QueryModificationActivity extends BaseActivity implements ViewPager
     private TabPageIndicator indicator;
     private ProductInfoTabAdapter adapter;
     private ImageView addproduct;
-    private TextView sureall,resetall;
+    private TextView sureall, resetall;
     private String who;
 
     @Override
@@ -43,13 +43,13 @@ public class QueryModificationActivity extends BaseActivity implements ViewPager
     }
 
     private void initview() {
-        who=getIntent().getExtras().getString("who","");
+        who = getIntent().getExtras().getString("who", "");
         TITLE = new String[]{"001号桌", "001号桌",
                 "001号桌", "001号桌", "001号桌",
                 "001号桌", "001号桌", "001号桌",
                 "001号桌"};
-        resetall= (TextView) findViewById(R.id.resetall);
-        sureall= (TextView) findViewById(R.id.sureall);
+        resetall = (TextView) findViewById(R.id.resetall);
+        sureall = (TextView) findViewById(R.id.sureall);
         addproduct = (ImageView) findViewById(R.id.addproduct);
         viewPager = (ViewPager) findViewById(R.id.vp_order_manage);
         indicator = (TabPageIndicator) findViewById(R.id.order_manage_indicator);
@@ -59,32 +59,32 @@ public class QueryModificationActivity extends BaseActivity implements ViewPager
         indicator.setViewPager(viewPager);
         indicator.setOnPageChangeListener(this);
         viewPager.setCurrentItem(0);
-        if("tab_main2".equals(who)){
-            sureall.setVisibility(View.GONE);
-            addproduct.setVisibility(View.VISIBLE);
-            resetall.setVisibility(View.VISIBLE);
-        }else if("tab_main4".equals(who)){
-            sureall.setVisibility(View.VISIBLE);
-            addproduct.setVisibility(View.GONE);
-            resetall.setVisibility(View.GONE);
-        }
+//        if("tab_main2".equals(who)){
+        sureall.setVisibility(View.GONE);
+        addproduct.setVisibility(View.VISIBLE);
+        resetall.setVisibility(View.VISIBLE);
+//        }else if("tab_main4".equals(who)){
+//            sureall.setVisibility(View.VISIBLE);
+//            addproduct.setVisibility(View.GONE);
+//            resetall.setVisibility(View.GONE);
+//        }
         addproduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(QueryModificationActivity.this, AddProductActivity.class).putExtra("who","QueryModificationActivity"));
+                startActivity(new Intent(QueryModificationActivity.this, AddProductActivity.class).putExtra("who", "QueryModificationActivity"));
             }
         });
         sureall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(QueryModificationActivity.this,CustomerBillActivity.class));
+                startActivity(new Intent(QueryModificationActivity.this, CustomerBillActivity.class));
             }
         });
         resetall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtils.makeText(QueryModificationActivity.this,"提交成功");
-
+                ToastUtils.makeText(QueryModificationActivity.this, "提交成功");
+                finish();
 //                startActivity(new Intent(QueryModificationActivity.this,CustomerBillActivity.class));
             }
         });

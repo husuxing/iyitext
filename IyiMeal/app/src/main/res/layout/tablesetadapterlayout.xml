@@ -22,6 +22,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:visibility="invisible"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -133,4 +134,11 @@
         android:orientation="vertical">
 
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/height20"
+        android:text="02"
+        android:textSize="@dimen/height15" />
 </RelativeLayout>
