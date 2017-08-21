@@ -1,5 +1,6 @@
 package jdhe.iyibank.com.iyimeal.activity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -13,10 +14,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
+import com.mylhyl.acp.Acp;
+import com.mylhyl.acp.AcpListener;
+import com.mylhyl.acp.AcpOptions;
 import com.yalantis.ucrop.UCrop;
 import com.zhy.base.fileprovider.FileProvider7;
 
 import java.io.File;
+import java.util.List;
 
 import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
@@ -68,10 +73,26 @@ public class AddFoodActivity extends BaseActivity implements View.OnClickListene
     private void onclickWay() {
         imagell.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mPopWindow = new CameraPopupWindow(AddFoodActivity.this, AddFoodActivity.this, "CAMERA_onclick");//"CAMERA_onclick"
-                mPopWindow.showAtLocation(view, Gravity.BOTTOM
-                        | Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+            public void onClick(final View view) {
+
+                //6.0权限处理
+                Acp.getInstance(AddFoodActivity.this).request(new AcpOptions.Builder().setPermissions(
+                        Manifest.permission.CAMERA).build(), new AcpListener() {
+                    @Override
+                    public void onGranted() {
+                        mPopWindow = new CameraPopupWindow(AddFoodActivity.this, AddFoodActivity.this, "CAMERA_onclick");//"CAMERA_onclick"
+                        mPopWindow.showAtLocation(view, Gravity.BOTTOM
+                                | Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+                    }
+
+
+                    @Override
+                    public void onDenied(List<String> permissions) {
+//                        ToastUtils.makeText(AddFoodActivity.this, permissions.get(0));
+                    }
+                });
+
+
             }
         });
     }
@@ -150,7 +171,7 @@ public class AddFoodActivity extends BaseActivity implements View.OnClickListene
 
             } else {
                 //权限被拒绝
-                ToastUtils.makeText(this,"Permission Denied");
+                ToastUtils.makeText(this, "Permission Denied");
             }
 
         }

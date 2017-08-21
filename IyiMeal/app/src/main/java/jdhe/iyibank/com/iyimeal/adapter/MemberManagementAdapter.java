@@ -53,7 +53,6 @@ public class MemberManagementAdapter extends BaseAdapter {
         } else {
             myViewHolder = (Holder) convertView.getTag();
         }
-
         TextPaint paint = myViewHolder.name.getPaint();
         paint.setFakeBoldText(true);
         final Holder finalMyViewHolder = myViewHolder;

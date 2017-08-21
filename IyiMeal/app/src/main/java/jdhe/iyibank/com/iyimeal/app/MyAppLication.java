@@ -60,7 +60,7 @@ public class MyAppLication extends Application {
         initClient();
         activityList = new LinkedList<Activity>();
         buyActivityList = new LinkedList<Activity>();
-
+//        MultiDex.install(this);
     }
 
     public static SharePreferenceUtil getSharePreferenceUtil() {
