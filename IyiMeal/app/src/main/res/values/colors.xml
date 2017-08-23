@@ -221,4 +221,9 @@
 
 
     <color name="default_ripple">#e2e2e2</color>
+
+
+    <drawable name="white">#fff</drawable>
+    <drawable name="green">#0f0</drawable>
+    <drawable name="gray">#b4b4b4</drawable>
 </resources>

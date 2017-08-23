@@ -49,14 +49,14 @@ public class FoodMaintenanceActivity extends BaseActivity {
     }
 
     private void initview() {
-            title_wen.setVisibility(View.VISIBLE);
-            title_wen.setText("完成");
-            title_wen.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(FoodMaintenanceActivity.this,HomeActivity.class));
-                }
-            });
+        title_wen.setVisibility(View.VISIBLE);
+        title_wen.setText("完成");
+        title_wen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FoodMaintenanceActivity.this, HomeActivity.class));
+            }
+        });
         resetall = (TextView) findViewById(R.id.resetall);
         sureall = (TextView) findViewById(R.id.sureall);
         resetall.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +96,7 @@ public class FoodMaintenanceActivity extends BaseActivity {
     }
 
     public void initDatas() {
-        leftlist=new ArrayList<FoodListItemData>();
+        leftlist = new ArrayList<FoodListItemData>();
         FoodListItemData foodListItemData1 = new FoodListItemData("川菜", "1");
         leftlist.add(foodListItemData1);
         for (int i = 0; i < 5; i++) {
@@ -105,7 +105,7 @@ public class FoodMaintenanceActivity extends BaseActivity {
             leftlist.add(foodListItemData);
         }
 
-        leftAdapter = new LeftAdapter(this,leftlist);
+        leftAdapter = new LeftAdapter(this, leftlist);
         leftListView.setAdapter(leftAdapter);
         leftListView.setDividerHeight(0);
         // listview点击事件
@@ -214,14 +214,14 @@ public class FoodMaintenanceActivity extends BaseActivity {
             });
             if ("1".equals(list.get(i).getIsHneg())) {
                 heng.setVisibility(View.VISIBLE);
-            }else {
+            } else {
                 heng.setVisibility(View.GONE);
             }
             return view1;
         }
 
         public void setViewHeng(int position) {
-            for(FoodListItemData foodListItemData:list){
+            for (FoodListItemData foodListItemData : list) {
                 foodListItemData.setIsHneg("0");
             }
             list.get(position).setIsHneg("1");

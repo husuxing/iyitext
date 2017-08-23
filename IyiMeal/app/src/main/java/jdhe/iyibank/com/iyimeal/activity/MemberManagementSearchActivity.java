@@ -24,8 +24,6 @@ public class MemberManagementSearchActivity extends BaseActivity  implements BGA
         initview();
     }
 
-
-
     private void initview() {
         title_back1= (LinearLayout) findViewById(R.id.title_back1);
         title_back1.setOnClickListener(new View.OnClickListener() {

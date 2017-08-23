@@ -6,7 +6,6 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
 import jdhe.iyibank.com.iyimeal.costomview.XCFlowLayout;

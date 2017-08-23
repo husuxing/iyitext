@@ -1,10 +1,12 @@
 package jdhe.iyibank.com.iyimeal.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import jdhe.iyibank.com.iyimeal.R;
 import jdhe.iyibank.com.iyimeal.app.BaseActivity;
+import jdhe.iyibank.com.iyimeal.entity.BatchAddTableBean;
 
 public class AddTableActivity extends BaseActivity {
 String title;
@@ -27,7 +29,14 @@ String title;
     }
 
     private void initview() {
-
+        title_wen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BatchAddTableBean batchAddTableBean=new BatchAddTableBean("3","3","3","3","3","3");
+                startActivity(new Intent(AddTableActivity.this,BatchTablelistActivity.class).putExtra("Bean", batchAddTableBean));
+                finish();
+            }
+        });
     }
 
     @Override
