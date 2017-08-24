@@ -1,6 +1,7 @@
 package jdhe.iyibank.com.iyimeal.app;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -16,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Calendar;
 import java.util.LinkedList;
 
@@ -31,13 +34,14 @@ import jdhe.iyibank.com.iyimeal.util.KeyBoardUtils;
  * Created by Administrator on 2017/5/5.
  */
 
-public class BaseActivity extends FragmentActivity {
+public class BaseActivity extends FragmentActivity implements IBaseView{
     private LinkedList<Activity> activityList;
     protected LinearLayout mBaseBack, mLinearTitle, title_rightImage,title_sc;
     protected TextView mBaseTitle,title_wen;
     protected ImageView topImageview, logo, title_menu;
     private RelativeLayout mLayoutTitle;
     public int pageNmb = 20, tuHeng = 5;
+    private ProgressDialog mProgressDialog;
 //    public int[] colorArr = {R.color.pressblueff, R.color.brand_brown_red
 //            , R.color.yellow_pressed, R.color.other_gray
 //            , R.color.translucent_black, R.color.yellow_pressed
@@ -313,5 +317,64 @@ public class BaseActivity extends FragmentActivity {
             time = year + "" + month;
         }
         return time;
+    }
+
+    @Override
+    public void showProgress(boolean flag, String message) {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            mProgressDialog.setCancelable(flag);
+            mProgressDialog.setCanceledOnTouchOutside(false);
+            mProgressDialog.setMessage(message);
+        }
+
+        mProgressDialog.show();
+    }
+
+    @Override
+    public void showProgress(String message) {
+        showProgress(true, message);
+    }
+
+    @Override
+    public void showProgress() {
+        showProgress(true);
+    }
+
+    @Override
+    public void showProgress(boolean flag) {
+        showProgress(flag, "");
+    }
+
+    @Override
+    public void hideProgress() {
+        if (mProgressDialog == null)
+            return;
+
+        if (mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+        }
+    }
+
+    @Override
+    public void showToast(int resId) {
+        showToast(getString(resId));
+    }
+
+    @Override
+    public void showToast(String msg) {
+        if (!isFinishing()) {
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        }
+    }
+    @Override
+    public Context getContext() {
+        return this;
+    }
+
+    @Override
+    public void close() {
+        finish();
     }
 }

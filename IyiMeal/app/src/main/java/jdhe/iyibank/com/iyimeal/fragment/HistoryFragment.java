@@ -70,7 +70,6 @@ public class HistoryFragment extends Fragment implements BGARefreshLayout.BGARef
                 Date date1 = new Date(System.currentTimeMillis());
                 switch (nub) {
                     case 1:
-
                         compareDate(date, date1);
                         start_tv.setText(getTime(date));
                         break;
@@ -127,7 +126,7 @@ public class HistoryFragment extends Fragment implements BGARefreshLayout.BGARef
         choose_shift.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                optionsPopupWindow.showAtLocation(rl_enddata, Gravity.BOTTOM, 0, 0);
+//                optionsPopupWindow.showAtLocation(rl_enddata, Gravity.BOTTOM, 0, 0);
             }
         });
 

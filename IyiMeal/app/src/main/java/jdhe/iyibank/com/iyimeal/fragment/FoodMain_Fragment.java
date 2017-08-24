@@ -35,6 +35,7 @@ import jdhe.iyibank.com.iyimeal.activity.AddFoodActivity;
 import jdhe.iyibank.com.iyimeal.activity.DialogActivity;
 import jdhe.iyibank.com.iyimeal.activity.FoodMaintenanceActivity;
 import jdhe.iyibank.com.iyimeal.activity.HomeActivity;
+import jdhe.iyibank.com.iyimeal.activity.Recycle_binActivity;
 import jdhe.iyibank.com.iyimeal.adapter.FragmentAdapter;
 import jdhe.iyibank.com.iyimeal.entity.FoodListItemData;
 
@@ -53,7 +54,7 @@ public class FoodMain_Fragment extends Fragment {
     TextView resetall, sureall;
     public BGARefreshLayout mRefreshLayout;
     private int pageData = 1, pagenum = 20;
-    private TextView mBaseTitle, nulltv;
+    private TextView mBaseTitle, nulltv,recyclebin;
     private LinearLayout titmean, mBaseBack, title_sc;
     private Button comfirmBtn;
     private ImageView logo;
@@ -76,7 +77,8 @@ public class FoodMain_Fragment extends Fragment {
 
 
     private void initview(View v) {
-
+        recyclebin= (TextView) v.findViewById(R.id.recyclebin);
+        recyclebin.setVisibility(View.VISIBLE);
         comfirmBtn = (Button) v.findViewById(R.id.comfirmBtn);
         titmean = (LinearLayout) v.findViewById(R.id.titmean);
         mBaseBack = (LinearLayout) v.findViewById(R.id.title_back);
@@ -88,7 +90,12 @@ public class FoodMain_Fragment extends Fragment {
 //        title_sc.setVisibility(View.VISIBLE);
         titmean.setVisibility(View.VISIBLE);
         mBaseTitle.setText("菜品维护");
-
+        recyclebin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Recycle_binActivity.class));
+            }
+        });
 
         resetall = (TextView) v.findViewById(R.id.resetall);
         sureall = (TextView) v.findViewById(R.id.sureall);

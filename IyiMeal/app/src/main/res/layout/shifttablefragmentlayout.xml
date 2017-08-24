@@ -145,6 +145,7 @@
             android:layout_marginRight="10dp"
             android:layout_gravity="center"
             android:gravity="center"
+            android:visibility="gone"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -170,6 +171,7 @@
             android:layout_marginRight="10dp"
             android:layout_gravity="center"
             android:gravity="center"
+            android:visibility="gone"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -197,7 +199,7 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/height15"
+        android:layout_marginTop="@dimen/height25"
         android:layout_marginRight="@dimen/height20"
         android:layout_marginLeft="@dimen/height20"
         android:text="确认交班"

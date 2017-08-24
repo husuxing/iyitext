@@ -43,6 +43,10 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <meta-data
+        android:name="UMENG_CHANNEL"
+        android:value="${UMC}" />
+
     <application
         android:name=".app.MyAppLication"
         android:allowBackup="true"
@@ -101,7 +105,8 @@
         <activity android:name=".activity.AddSmartPointActivity" />
         <activity android:name=".activity.TurnTableActivity" />
         <activity android:name=".activity.BatchAddTableActivity" />
-        <activity android:name=".activity.BatchTablelistActivity"></activity>
+        <activity android:name=".activity.BatchTablelistActivity" />
+        <activity android:name=".activity.Recycle_binActivity"></activity>
     </application>
 
 </manifest>

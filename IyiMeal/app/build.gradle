@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin:'android-apt'
+apply plugin: 'android-apt'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -11,10 +11,31 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+//    signingConfigs {
+//        myConfig {
+//            storeFile file("iyimeal.jks")
+//            storePassword "iyimeal"
+//            keyAlias "iyimeal"
+//            keyPassword "iyimeal"
+//        }
+//    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        productFlavors {
+            baidu {
+                manifestPlaceholders = [UMC:"product-baidu"]
+            }
+            _360 {
+                manifestPlaceholders = [UMC:"product-_360"]
+            }
+            yingyongbao {
+                manifestPlaceholders = [UMC:"product-yingyongbao"]
+            }
         }
     }
     // 移除lint检查的error
@@ -38,12 +59,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'com.android.support:design:25.1.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.2@aar'
     compile 'com.loopj.android:android-async-http:1.4.4'
 //    compile files('libs/gson-2.3.1.jar')
-    compile'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'
     compile 'com.yalantis:ucrop:1.3.+'
