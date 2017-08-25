@@ -5,6 +5,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import com.loopj.android.http.AsyncHttpClient;
+import com.taobao.weex.InitConfig;
+import com.taobao.weex.WXSDKEngine;
 
 import org.apache.http.conn.ssl.SSLSocketFactory;
 
@@ -29,6 +31,7 @@ import jdhe.iyibank.com.iyimeal.util.LogTool;
 import jdhe.iyibank.com.iyimeal.util.SessionIdUtils;
 import jdhe.iyibank.com.iyimeal.util.SharePreferenceUtil;
 import jdhe.iyibank.com.iyimeal.util.ToastUtils;
+import jdhe.iyibank.com.iyimeal.weex.ImageAdapter;
 
 /**
  * Created by Administrator on 2017/5/5.
@@ -55,6 +58,11 @@ public class MyAppLication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //weex
+        InitConfig config=new InitConfig.Builder().setImgAdapter(new ImageAdapter()).build();
+        WXSDKEngine.initialize(this,config);
+        //
+
         sharePreferenceUtil = new SharePreferenceUtil(this);
         instance = this;
         initClient();
